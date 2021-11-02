@@ -1,0 +1,17 @@
+.done {
+    text-decoration: line-through;
+    padding: 10px;
+    border: 1px solid black;
+    width: 250px;;
+    border-radius: 20px;
+    margin: 10px 0px;
+}
+
+.undone {
+    /* text-decoration: line-through; */
+    padding: 10px;
+    border: 1px solid black;
+    width: 250px;
+    border-radius: 20px;
+
+}
