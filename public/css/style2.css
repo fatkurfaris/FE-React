@@ -1,0 +1,127 @@
+
+.space{
+    margin-top: 350px;
+    margin-bottom: 285px;
+    margin-left: 120px;
+}
+
+.space2{
+    margin-left: 100px;
+    padding-right: 450px;
+
+}
+
+.space3{
+    margin-top: 20px;
+}
+
+.space4{
+    margin-left: 100px;
+    padding-right: 545px;
+}
+
+.space5{
+    margin-left: 100px;
+}
+
+.space-button{
+    margin-left: 100px;
+    margin-top: 20px;
+    padding-left: 100px;
+    border-radius: 50px;
+    border-color: rgba(244, 117, 34, 1);
+    background-color: rgba(244, 117, 34, 1);
+}
+
+.text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    padding-top: 80px;
+    padding-left: 100px;
+    text-decoration: none;
+    color: rgb(25, 52, 94, 1);
+    
+}
+
+
+.text2{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    padding-left: 100px;
+    text-decoration: none;
+    color: rgb(25, 52, 94, 1);
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+
+    width: 200px;
+}
+
+.text3{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.text4{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    padding-left: 100px;
+    text-decoration: none;
+    color: rgb(25, 52, 94, 1);
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+
+    width: 240px;
+}
+
+.text5{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    padding-left: 100px;
+    text-decoration: none;
+    color: rgb(25, 52, 94, 1);
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+
+    width: 240px;
+}
+
+.text6{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+
+    text-decoration: none;
+    color: red
+}
+
+.cover {
+    background-color: #19345EA6;
+    height: 850px;
+    width: 600px;
+}
+
+.logo {
+    background-color: #19345EA6;
+    height: 850px;
+    width: 600px;
+}
+
