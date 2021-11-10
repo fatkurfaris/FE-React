@@ -1,0 +1,58 @@
+.posisi{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #060b26;
+  padding: 30px;
+}
+
+.posisi h1{
+  color: white;
+}
+
+.posisi .form{
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.posisi .form input{
+  border: none;
+  padding: 5px;
+  width: 300px ;
+}
+
+.posisi .form .btn-submit{
+  border: none;
+  background-color: orange;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+ 
+}
+
+.card{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid grey;
+  padding: 20px;
+  width: 450px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .text {
+  flex: 3;
+}
+
+.button-action{
+  flex: 1;
+}
