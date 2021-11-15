@@ -1,0 +1,121 @@
+.text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12px;
+    padding-top: 7px;
+    text-decoration: none;
+    color: rgb(25, 52, 94, 1);
+    
+}
+
+
+.text3{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    color: gba(25, 52, 94, 1);
+    fill: solid;
+    color: rgb(25, 52, 94, 1);
+    padding-top: 190px;
+    padding-left: 20px;
+}
+
+.text4{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 85px;
+    color: gba(25, 52, 94, 1);
+    fill: solid;
+    color: rgb(25, 52, 94, 1);
+    padding-left: 20px;
+
+}
+
+.text5{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    color: gba(25, 52, 94, 1);
+    fill: solid;
+    color: rgb(25, 52, 94, 1);
+    padding-left: 20px;
+    padding-top: 10px;
+
+}
+
+.button-get-in-touch{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    fill: solid;
+    color: white;
+    text-decoration: none;
+
+}
+
+.space {
+    margin-right: 98px;
+}
+
+.space2{
+    margin-right: 30px;
+}
+
+.space3{
+    padding-left: 98px;
+    margin-bottom: -5px;
+    margin-top: -5px;
+}
+
+.space4{
+    margin-right: -100px;
+    padding-right: -50px;
+}
+
+.space5-button{
+    margin-bottom: 157px;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: rgba(244, 117, 34, 1);
+    border-radius: 20px;
+    border-color: rgba(244, 117, 34, 1);
+}
+
+
+a:link{ 
+    color: rgb(25, 52, 94, 1);
+  
+} 
+
+a:hover{
+    color: rgba(244, 117, 34, 1);
+    
+}
+
+.col-7 .space5-button a:hover  {
+    color: black;
+}
+
+
+.image3{
+    position: absolute;
+    z-index: -1;
+}
+
+.image2{
+    margin-top: 150px;
+    position:   ;
+}
+

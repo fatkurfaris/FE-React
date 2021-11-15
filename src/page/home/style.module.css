@@ -49,7 +49,7 @@
 
 }
 
-.button-get-in-touch{
+.gettouch{
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 10px;
@@ -84,7 +84,7 @@
     padding-right: -50px;
 }
 
-.space5-button{
+.space5{
     margin-bottom: 157px;
     margin-left: 20px;
     margin-top: 20px;
@@ -111,8 +111,8 @@ a:hover{
 }
 
 
-body {
-    background-image: url("img/bg-img.png");
+.bg {
+    background-image: url("../../img/bg-img.png");
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
