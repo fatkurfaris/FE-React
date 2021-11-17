@@ -85,6 +85,7 @@ import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import PassengerInput from './PassengerInput';
 import ListPassenger from './ListPassenger';
+import ListItem from "./ListItem";
 import Header from './Header';
 import {gql,  useLazyQuery } from '@apollo/client';
 
@@ -94,6 +95,7 @@ query MyQuery2($id: Int!) {
       Nama
       Umur
       JenisKelamin
+      id
     }
   }
 `
@@ -136,21 +138,30 @@ function Home() {
             <Header />
             <input type="number" className="input-text" placeholder="Id" value={id} onChange={onChangeId} />
             <button onClick={onGetData}>Get Data</button>
-            <table cellPadding="5px" cellSpacing="0" style={{margin: "auto"}}>
-                    <thead bgcolor="red">
-                        <td>Nama</td>
-                        <td>Umur</td>
-                        <td>Jenis Kelamin</td>
-                        <td bgcolor="white" className="removeBorder"></td>
-                    </thead>
-                    </table>
-            {data?.Todolist_Anggota.map((v, i) => (
+            {data?.Todolist_Anggota.map((v,i) => (
                 // <ListPassenger
                 <div>
-  
+                    <table cellPadding="5px" cellSpacing="0" style={{margin: "auto"}}>
+                    <thead>
+                        <td bgcolor="red">Nama</td>
+                        <td bgcolor="red">Umur</td>
+                        <td bgcolor="red">Jenis Kelamin</td>
+                        <td bgcolor="white" className="removeBorder"></td>
+                    
+                <ListItem
+                id={i}
+                Nama={v.Nama}
+                Umur={v.Umur}
+                JenisKelamin={v.JenisKelamin}
+                />
+                    </thead>
+                    </table>
+
                 </div>
                 // 
+
             ))}
+            
         </div>
     )
 }
