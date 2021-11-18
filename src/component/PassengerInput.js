@@ -1,5 +1,13 @@
 import { useState } from "react"
 import "./Home.css"
+import {gql,useMutation,  useLazyQuery } from '@apollo/client';
+
+const InsertDataPassenger = gql`
+mutation MyInsert($id: Int!, $Nama: String!, $Umur: Int!, $JenisKelamin: String!) {
+    insert_Todolist_Anggota(objects: {JenisKelamin: $JenisKelamin, Nama: $Nama, Umur: $Umur, id: $id}) {
+      affected_rows
+    }
+  }`
 
 function PassengerInput(props) {
   const [state, setState] = useState({

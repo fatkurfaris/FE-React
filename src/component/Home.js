@@ -87,7 +87,9 @@ import PassengerInput from './PassengerInput';
 import ListPassenger from './ListPassenger';
 import ListItem from "./ListItem";
 import Header from './Header';
-import {gql,  useLazyQuery } from '@apollo/client';
+import {gql,useMutation,  useLazyQuery } from '@apollo/client';
+
+
 
 const GetDataPassenger = gql`
 query MyQuery2($id: Int!) {
@@ -100,14 +102,47 @@ query MyQuery2($id: Int!) {
   }
 `
 
+const InsertDataPassenger = gql`
+mutation MyInsert($id: Int!, $Nama: String!, $Umur: Int!, $JenisKelamin: String!) {
+    insert_Todolist_Anggota(objects: {JenisKelamin: $JenisKelamin, Nama: $Nama, Umur: $Umur, id: $id}) {
+      affected_rows
+    }
+  }`
+
+const DeleteDataPassenger = gql`
+mutation MyMutation2 ($id : Int!){
+    delete_Todolist_Anggota_by_pk(id: $id) {
+      id
+    }
+  }
+  `
+
+  const UpdateDataPassenger = gql`
+  mutation MyMutation3($id: uuid!, $JenisKelamin: String!, $Nama: String!, $Umur: Int!) {
+    update_Todolist_Anggota(where: {id: {_eq: $id}}, _set: {JenisKelamin: $JenisKelamin, Nama: $Nama, Umur: $Umur}) {
+      affected_rows
+    }
+  }
+`
+
 
 function Home() {
     // const { error, loading, data } = useQuery(LOAD_PASSENGERS);
     const [getPassengerId, {error, loading, data}] = useLazyQuery(GetDataPassenger);
+    const [deletePassenger, {loading: loadingDelete}] = useMutation(DeleteDataPassenger, {
+        refetchQueries: [GetDataPassenger]
+    });
+    const [insertPassenger,{loading: loadingInsert}] = useMutation(InsertDataPassenger, {
+        refetchQueries: [GetDataPassenger]
+    });
+    const [updatePassenger,{loading: loadingUpdate}] = useMutation(UpdateDataPassenger, {
+        refetchQueries: [GetDataPassenger]
+    });
+
 
     // useEffect(() => {
     //     if (data) {
-    //         setDataPassenger(data.passenger);
+    //         setId(data.id);
     //     }
     //     if (error) {
     //         console.log("tes",error);
@@ -115,14 +150,37 @@ function Home() {
     //     }
     // }, [data])
 
-    const [id, setId] = useState(0);
-    // const [id_stasiun, setStasiunID] = useState({idStasiun: null});
+    const [id_P, setId] = useState(0);
     const [list, setList] = useState([]);
 
+    const hapusPengunjung = (idx) => {
+        deletePassenger({variables: {
+            id: idx
+        }})
+    }
+
+    const tambahPengunjung = (newUser) => {
+        insertPassenger({variables: {
+            Nama: newUser.nama,
+            Umur: newUser.umur,
+            JenisKelamin: newUser.jenisKelamin,
+            id: id_P
+        }})
+    }
+
+    const editPengunjung = (editUser) => {
+        // console.log(editUser);
+        updatePassenger({variables: {
+            Nama: editUser.nama,
+            Umur: editUser.umur,
+            JenisKelamin: editUser.jenisKelamin,
+            id: id_P
+        }})
+    }
 
     const onGetData = () => {
         getPassengerId({variables: {
-            id:id
+            id:id_P
         }})
         setList(data?.Todolist_Anggota)
     }
@@ -136,9 +194,11 @@ function Home() {
     return (
         <div>
             <Header />
-            <input type="number" className="input-text" placeholder="Id" value={id} onChange={onChangeId} />
+            <input type="number" className="input-text" placeholder="Id" value={id_P} onChange={onChangeId} />
             <button onClick={onGetData}>Get Data</button>
-            {data?.Todolist_Anggota.map((v,i) => (
+            
+            {/* {data? <h3>{`Stasiun ${data.Todolist_Anggota[0].stasiun.namaStasiun}`}</h3> : null} */}
+            {data?.Todolist_Anggota.map((v) => (
                 // <ListPassenger
                 <div>
                     <table cellPadding="5px" cellSpacing="0" style={{margin: "auto"}}>
@@ -149,11 +209,14 @@ function Home() {
                         <td bgcolor="white" className="removeBorder"></td>
                     
                 <ListItem
-                id={i}
+                id={v}
                 Nama={v.Nama}
                 Umur={v.Umur}
                 JenisKelamin={v.JenisKelamin}
+                hapusPengunjung={()=> hapusPengunjung(v.id)}
+                editPengunjung={()=> editPengunjung(v.id)}
                 />
+                
                     </thead>
                     </table>
 
@@ -161,7 +224,7 @@ function Home() {
                 // 
 
             ))}
-            
+            <PassengerInput tambahPengunjung={tambahPengunjung}/>
         </div>
     )
 }
