@@ -32,9 +32,9 @@ editPengunjung,
       } else {
         const newData = {
             id: id,
-            Nama: state.Nama,
-            Umur: state.Umur,
-            JenisKelamin: state.JenisKelamin,
+            Nama: Nama,
+            Umur: Umur,
+            JenisKelamin: JenisKelamin,
         }
         editPengunjung(newData);
 
@@ -96,8 +96,8 @@ editPengunjung,
         />
         <p>Masukkan Jenis Kelamin Anda</p>
         <select onChange={onChange} name="JenisKelamin">
-          <option value="Pria" selected>
-            Pria
+          <option value="LakiLaki" selected>
+            Laki-Laki
           </option>
           <option value="Wanita">Wanita</option>
         </select>

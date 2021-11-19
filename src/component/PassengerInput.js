@@ -79,7 +79,7 @@ function PassengerInput(props) {
         <p>Masukkan Umur Anda</p>
         <input type="number" className="input-text" placeholder="Umur anda ..." value={state.umur} name="umur" onChange={onChange} />
         <p>Masukkan Jenis Kelamin Anda</p>
-        <select onChange={onChange} name="jenisKelamin">
+        <select onChange={onChange} name="JenisKelamin">
           <option value="Pria" selected>
             Pria
           </option>
