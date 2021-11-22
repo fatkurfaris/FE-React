@@ -1,3 +1,25 @@
 .bg{
     background-color: rgba(15, 58, 121, 1);
 }
+
+.text1{
+    color: white;
+}
+
+.space{
+    padding-top: 11px;
+}
+.space1{
+    padding-bottom: 11px;
+}
+
+.space2{
+    padding-bottom: 11px;
+    align-items: center;
+    text-align: center;
+}
+
+.text3{
+    color: white;
+    position: fixed;
+}
