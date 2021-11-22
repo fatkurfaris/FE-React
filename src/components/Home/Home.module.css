@@ -1,0 +1,14 @@
+/* .bg{
+    background-image: url("../../img/951140_720.jpg");
+    width: 4rem; */
+/* 
+} */
+
+.bg{
+    background-image: url("../../img/951140_720.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 100px;
+    padding-bottom: 700px;
+    background-color: black;
+}
