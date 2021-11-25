@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ruluko&display=swap');
+
+.box{
+    text-align: center;
+    
+}
+
+.space{
+    padding-top: 9px;
+}
+
+.but{
+    /* margin-left: 45px; */
+}
+
+.cardM{
+    margin-bottom: 55px;
+}
+
+.ton{
+    margin: 45px;
+    padding: 9px 15px 9px 15px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(15, 58, 121, 1);
+}

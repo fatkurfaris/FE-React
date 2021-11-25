@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ruluko&display=swap');
+
+.space{
+    padding-top: 99px;
+    align-items: center;
+    text-align: center;
+}
+
+.space2{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    text-align: justifyz;
+}
+
+.space3{
+    margin-top: 15px;
+}
+.space4{
+    padding-top: 9px;
+}
+
+.space5{
+    font-family: 'Roboto', sans-serif; 
+    padding-bottom: 65px;
+}
+
+/* .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} */
+
+.box2{
+    /* border-color: rgb(196, 212, 223);
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 1px 1px rgb(196, 212, 223); */
+    margin-bottom: 55px;
+}
+
+/* .container{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+} */
+
+/* .box{
+  display: flex;
+  justify-content: space-between;
+} */
+
+.text{
+    color: black;
+    font-weight: 700;
+    font-size: 41px;
+    font-family: 'Roboto', sans-serif; 
+}
+
+.roboto{
+    font-family: 'Roboto', sans-serif; 
+}
+
+.formm{
+    background-color: rgba(15, 58, 121, 1) ;
+    color: rgba(15, 58, 121, 1) ;
+}
+
+.mid{
+    align-items: center;
+}
+
+.kanan{
+    align-items: right;
+    text-align: right;
+}
+
+.kiri{
+    align-items: left;
+    text-align: left;
+}

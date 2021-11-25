@@ -1,0 +1,27 @@
+.box{
+    text-align: center;
+}
+
+.but{
+    /* margin-left: 45px; */
+}
+
+.cardM{
+    margin-bottom: 55px;
+}
+
+.ton{
+    margin: 45px;
+    padding: 9px 15px 9px 15px;
+    color: white;
+    background-color: rgba(15, 58, 121, 1);
+}
+
+.space{
+    padding-top: 9px;
+}
+
+.cardN{
+    color: white;
+    background-color: blue;
+}

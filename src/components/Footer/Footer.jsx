@@ -10,14 +10,14 @@ export default function Footer(){
         <div className={styles.bg}>
             <Container className={styles.space}>
                 <Row>
-                    <Col sm={1}><Image src={Gambar1} width="200%"/> </Col>
-                    <Col sm={8}></Col>
-                    <Col sm={2} className={styles.text3}>Home|| NowPlaying||Upcoming||</Col>
+                    <Col sm={4} className={styles.text1}> <Image src={Gambar1} width="50%"/> </Col>
+                    <Col sm={4}></Col>
+                    <Col sm={4} className={styles.text3}>Home|| NowPlaying||Upcoming||</Col>
                 </Row>
                 <Row>
                     <Col sm={4} className={styles.text1}> Pramuka no 7, mlati, sinduadi Sleman, Yogyakarta </Col>
                     <Col sm={4}></Col>
-                    <Col sm={4}></Col>
+                    <Col sm={4} className={styles.text1}> </Col>
                 </Row>
                 
                 <Row className={styles.space1}>

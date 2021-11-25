@@ -3,14 +3,15 @@ import {Col} from 'react-bootstrap'
 import {Container} from 'react-bootstrap'
 import {Row} from 'react-bootstrap'
 import {Image} from 'react-bootstrap'
+import {Placeholder} from 'react-bootstrap'
 import Gambar1 from '../../img/house-g7c3307618_1920.jpg'
 import Gambar2 from '../../img/house-gb7052dc36_1920.jpg'
 import Gambar3 from '../../img/951140_720.jpg'
 
 export default function History(){
     return(
-        <div>
-            <div>
+        <div className={style.backg}>
+            <div >
             <div className={style.History}>History</div>
                 <Container>
                 <Row className="justify-content-md-center">
@@ -73,5 +74,6 @@ export default function History(){
 
             </div>
         </div>
+        
     )
 }

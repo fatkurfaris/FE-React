@@ -1,0 +1,63 @@
+.bg{
+    background-color: rgb(225, 215, 248);
+    padding-top: 99px;
+    padding-bottom: 35px
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ruluko&display=swap');
+
+.text1{
+    
+    font-family: 'Ruluko', sans-serif;
+    color: white;
+    font-weight: 900;
+    font-size: 64px;
+    
+}
+
+.text2{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.text3{
+    margin-left: 88px;
+    font-family: 'Ruluko', sans-serif;
+    color: white;
+    font-weight: 900;
+    font-size: 64px;
+}
+
+.text4{
+    padding-top: 41px;
+    font-family: 'Ruluko', sans-serif;
+    color: white;
+    font-size: 28px;
+}
+
+.text5{
+    font-family: 'Ruluko', sans-serif;
+    color: white;
+    font-size: 28px;
+}
+
+.box{
+    border-radius: 45px;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 25px;
+    color: ;
+    place-content: blue;
+}
+
+.space1{
+    padding-top: 25px;
+    padding-left: 45px;
+    
+}
+
+/* .space2{
+    margin-right: 15px;
+    padding-right: 15px;
+} */

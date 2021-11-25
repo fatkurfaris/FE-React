@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ruluko&display=swap');
+
+
+.back{
+    background-color: rgba(15, 58, 121, 1);
+   
+    
+}
+
+.text1{
+    font-family: 'roboto', sans-serif;
+    color: white;
+}
+
+.text2{
+    font-family: 'roboto', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.tengah{
+    text-align: center;
+}
+
+.Mkanan{
+    /* margin-right: 55px; */
+    padding-right: 211px;
+}
