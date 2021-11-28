@@ -1,5 +1,5 @@
 import React from "react";
-import Detail from "../../components/Details/Detail.jsx";
+import Desc from "../../components/Desc/Desc.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
 import NavbarHome from "../../components/NavbarHome/NavbarHome.jsx";
 
@@ -9,7 +9,7 @@ export default function Description(){
     return(
         <>
             <NavbarHome/>
-            <Detail/>
+            <Desc/>
             <Footer/>
         </>
     )   

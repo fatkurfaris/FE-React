@@ -1,5 +1,6 @@
 import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Container,  Row } from 'react-bootstrap'
+import Navbars from '../../components/Navbar/Navbar'
 import style from './Login.module.css'
 
 export default function Login(){
@@ -7,6 +8,13 @@ export default function Login(){
         <div className={style.back}>
             <div>
                 <div>
+                    
+                <div className={style.text1}>
+                                    <h4>Home</h4>
+                                    <h4>NowPlaying</h4>
+                                    <h4>Upcoming</h4>
+                                    <h4>About</h4>
+                                </div>
                     <Container>
                         <Row>
                             <Col sm={2}>
@@ -25,8 +33,11 @@ export default function Login(){
                             </Col>
                             <Col sm={5}>
                                 <div>
-                                    <h4 className={style.text2}>-----Bioskop----</h4>
-                                    <h3 className={style.text2}>BeeMovie</h3>
+                                    <div className={style.text2}>
+                                    <h4 >-----Bioskop----</h4>
+                                    <h3 >BeeMovie</h3>
+                                    </div>
+                                    
                                     
                                     {/* <Row> */}
                                     <label htmlFor="">Username</label><br />

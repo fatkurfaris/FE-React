@@ -5,11 +5,42 @@ import {Col} from 'react-bootstrap'
 import {Card} from 'react-bootstrap'
 import {Button} from 'react-bootstrap'
 import style from './Coming.module.css'
+import { gql,useQuery } from '@apollo/client'
+
+
+
+export const LOAD_UPCOMING = gql `
+query Upcoming {
+    Upcoming {
+      id
+      Cast
+      Directors
+      Duration
+      Genre
+      Img
+      Producers
+      Production
+      Rate
+      Sinopsis
+      Title
+      Trailer
+      Writer
+    }
+  }
+`
 
 export default function Coming(){
+    const {data,error}= useQuery (LOAD_UPCOMING);
+
+    if(error) {
+        console.log(error)
+        return null
+      }
+
     return (
-        <div>
-            <div>
+       
+        <div >
+            <div className={style.backg}>
                 <Container className={style.cardM}>
                     <div className={style.but}> 
                         <button className={style.ton}>
@@ -17,8 +48,22 @@ export default function Coming(){
                         </button>
                     </div>
                     <Row className={style.box}>
+                        {data?.Upcoming.map((v)=>(
                         <Col xs={18} md={3} className={style.space}>
-                            <Card style={{ width: '18rem' }}>
+                            <Card style={{ width: '18rem' }}  className={style.shadow}>
+                            <Card.Img variant="top" src="holder.js/100px180" />
+                            <Card.Body>
+                                <Card.Title>{v.Title}</Card.Title>
+                                <Card.Text>
+                                {v.Sinopsis}
+                                </Card.Text>
+                                <Button variant="primary"><link rel="stylesheet" href="Description" />Go somewhere</Button>
+                            </Card.Body>
+                            </Card>
+                        </Col>
+                        ))}
+                        {/* <Col xs={18} md={3} className={style.space}>
+                            <Card style={{ width: '18rem' }}  className={style.shadow}>
                             <Card.Img variant="top" src="holder.js/100px180" />
                             <Card.Body>
                                 <Card.Title>Card Title</Card.Title>
@@ -31,7 +76,7 @@ export default function Coming(){
                             </Card>
                         </Col>
                         <Col xs={18} md={3} className={style.space}>
-                        <Card style={{ width: '18rem' }}>
+                        <Card style={{ width: '18rem' }}  className={style.shadow}>
                             <Card.Img variant="top" src="holder.js/100px180" />
                             <Card.Body>
                                 <Card.Title>Card Title</Card.Title>
@@ -44,7 +89,7 @@ export default function Coming(){
                             </Card>
                         </Col>
                         <Col xs={18} md={3} className={style.space}>
-                        <Card style={{ width: '18rem' }}>
+                        <Card style={{ width: '18rem' }}  className={style.shadow}>
                             <Card.Img variant="top" src="holder.js/100px180" />
                             <Card.Body>
                                 <Card.Title>Card Title</Card.Title>
@@ -57,7 +102,7 @@ export default function Coming(){
                             </Card>
                         </Col>
                         <Col xs={18} md={3} className={style.space}>
-                        <Card style={{ width: '18rem' }}>
+                        <Card style={{ width: '18rem' }}  className={style.shadow}>
                             <Card.Img variant="top" src="holder.js/100px180" />
                             <Card.Body>
                                 <Card.Title>Card Title</Card.Title>
@@ -70,7 +115,7 @@ export default function Coming(){
                             </Card>
                         </Col>
                         <Col xs={18} md={3} className={style.space}>
-                        <Card style={{ width: '18rem' }}>
+                        <Card style={{ width: '18rem' }}  className={style.shadow}>
                             <Card.Img variant="top" src="holder.js/100px180" />
                             <Card.Body>
                                 <Card.Title>Card Title</Card.Title>
@@ -81,7 +126,7 @@ export default function Coming(){
                                 <Button variant="primary"><link rel="stylesheet" href="Description" />Go somewhere</Button>
                             </Card.Body>
                             </Card>
-                        </Col>
+                        </Col> */}
                     </Row>
                 </Container>
             </div>    

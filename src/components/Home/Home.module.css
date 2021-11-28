@@ -1,5 +1,5 @@
 .bg{
-    background-color: rgb(225, 215, 248);
+    background-color: rgb(25, 71, 139);
     padding-top: 99px;
     padding-bottom: 35px
 }
@@ -12,6 +12,7 @@
     color: white;
     font-weight: 900;
     font-size: 64px;
+    padding-top: 40px;
     
 }
 
@@ -53,7 +54,7 @@
 
 .space1{
     padding-top: 25px;
-    padding-left: 45px;
+    /* padding-left: 45px; */
     
 }
 

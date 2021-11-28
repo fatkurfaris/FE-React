@@ -10,11 +10,12 @@
     text-align: center;
     align-items: center;
     align-content: center;
-    text-align: justify;
+    text-align: justifyz;
 }
 
 .space3{
     margin-top: 15px;
+
 }
 .space4{
     padding-top: 9px;
@@ -55,7 +56,6 @@
     font-weight: 700;
     font-size: 41px;
     font-family: 'Roboto', sans-serif; 
-    padding-bottom: 45px;
 }
 
 .roboto{
@@ -81,31 +81,7 @@
     text-align: left;
 }
 
-.minute{
-    background-color: rgba(15, 58, 121, 1);
-    color: white;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    padding-left: -500px;
-}
-
-.Seat{
-    background-color: white;
-    color: rgba(15, 58, 121, 1);
-    padding: 5px 65px 5px 65px ;
-    margin-bottom: 10px;
-    font-family: 'Roboto' sans-serif;
-    font-weight: 900;
-}
-
 .submit{
-    color: white ;
+    color: rgba(15, 58, 121, 1) ;
     background-color: rgba(15, 58, 121, 1);
-    font-family: 'Roboto' sans-serif;
-    font-weight: 500;
-}
-
-.text1{
-    color: rgba(15, 58, 121, 1);
-    font-family: 'Roboto' sans-serif;
 }

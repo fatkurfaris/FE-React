@@ -5,6 +5,8 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Description from "./pages/Description/Description";
 import Login from "./pages/Login/Login";
+import Detail from "./pages/Details/Detail";
+import Screen from "./pages/Screen/Screen";
 
 
 function App() {
@@ -14,11 +16,20 @@ function App() {
       <Route path="/" element={<Home/>} />
       <Route path="/About" element={<About/>} />
       <Route path="/Login" element={<Login/>} />
+      {/* <Route path="/Description/:id" element={<Description/>} /> */}
       <Route path="/Description" element={<Description/>} />
+      <Route path="/Screen" element={<Screen/>} />
+      <Route path="/Detail" element={<Detail/>} />
       <Route path="/Movie" element={<Home/>} />
       <Route path="/Upcoming" element={<Home/>} />
       
     </Routes>
+    {/* to="halaman/"+id */}
+    {/* to={"halaman/"+id} */}
+    {/* const {id} = useParams() */}
+    {/* import use params form react router dom */}
+
+
 
   </BrowserRouter>
   );

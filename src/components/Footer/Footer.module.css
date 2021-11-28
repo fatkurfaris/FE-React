@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ruluko&display=swap');
 
-.bg{
+.bg{    
     background-color: rgba(15, 58, 121, 1);
 }
 
 .text1{
     color: white;
+    /* padding-bottom: -55px; */
+    /* margin-bottom: -55px; */
 }
 
 .space{

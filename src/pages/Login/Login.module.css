@@ -10,12 +10,14 @@
 .text1{
     font-family: 'roboto', sans-serif;
     color: white;
+    padding-top: 100px;
 }
 
 .text2{
     font-family: 'roboto', sans-serif;
     color: white;
     text-align: center;
+    padding-top : 120px;
 }
 
 .tengah{
@@ -26,3 +28,7 @@
     /* margin-right: 55px; */
     padding-right: 211px;
 }
+
+/* .background{
+    background-color: ;
+} */

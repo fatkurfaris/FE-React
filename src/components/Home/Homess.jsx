@@ -15,8 +15,7 @@ export default function Homess(){
                     </Col>
                     <Col sm={7}>
                     <div>
-                        <h4 className={style.text1}>Welcome</h4>
-                        <h4 className={style.text3}> to BeeMovie</h4>
+                        <h4 className={style.text1}>Welcome to BeeMovie</h4>
                         <h4 className={style.text4}> a Place for watching movie</h4>
                         <h4 className={style.text5}>with family or friend</h4>
                         <div className={style.space1}>

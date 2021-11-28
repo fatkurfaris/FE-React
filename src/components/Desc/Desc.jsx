@@ -9,72 +9,72 @@ import {Image} from 'react-bootstrap'
 import style from './Detail.module.css'
 import Gambar1 from '../../img/movie-theater-g39fcba8ce_1920.jpg'
 
-export default function Details(){
+export default function Desc(){
     return(
         <div>
             <div>
                 <Container className={style.space}>
-                    <div>
-                          <h3 className={style.text}>Title</h3>
-                    </div>    
                 <Row>
                     <Col xs={6} md={6}>
-                      
+                      <div>
+                          <h3 className={style.text}>Now Playing</h3>
+                      </div>
                       <div className={style.box}>
                           <div className={style.box2}>
                             <Image src={Gambar1} width="99%   "/>
                             <Row className={style.space4}>
                                 {/* <Col md={4}></Col> */}
-                                <Col  className={style.mid}> 
-                                    <h4>Location</h4>
-                                </Col>
-                                {/* <Col md={6} ></Col> */}
-                            </Row>
-                            <Row className={style.space4}>
-                                {/* <Col md={4}></Col> */}
-                                <Col  className={style.mid}> 
-                                    <Button className={style.submit}>
+                                <Col  className={style.kanan}> 
+                                    <Button variant="dark">
                                         <link rel="stylesheet" href="Description" />
-                                         Payment
+                                         Trailer
+                                    </Button>
+                                </Col>
+                                <Col className={style.kiri}>  
+                                    <Button variant="dark">
+                                        <link rel="stylesheet" href="Description" />
+                                         Buy Ticket
                                     </Button>
                                 </Col>
                                 {/* <Col md={6} ></Col> */}
                             </Row>
-                            
                           </div>
 
                       </div>
                     </Col>
                     <Col xs={6} md={6} className={style.space4}>
-
+                    <Form >
+                        <FormControl
+                        className={style.formm}
+                        type="search"
+                        placeholder="Search"
+                        className="me-2"
+                        aria-label="Search"
+                        defaultValue="#563d7c"
+                        />
+                    </Form>
                     <div>
+                        <h4 className={style.space3}>
+                            Title
+                        </h4>
                         <Row>
-                            <Col sm={1}></Col>
-                            <Col sm={4}>
-                            <h4 className={style.minute}>
-                                Minute
-                                </h4>
-                                <h4 className={style.minute}>
-                                Rate
-                                </h4>
-                                
-                                <Button className={style.Seat}>
-                                    Seat
-                                </Button >
-                                <h4 className={style.minute}>
-                                Rp.1500000
-                                </h4>
-                                <Form.Select aria-label="Default select example" className={style.text1}>
-                                    <option >Payment Method</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </Form.Select>
-                            </Col>
-                            <Col sm={4}>
-                                
-                            </Col>
-                            <Col sm={3}></Col>
+                        <Col sm={3} className={style.kiri}>
+                        <h6>Jenis FIlm</h6>
+                        <h6>Produser</h6>
+                        <h6>Sutradara</h6>
+                        <h6>Penulis</h6>
+                        <h6>Produksi</h6>
+                        <h6>Cast</h6>
+                        </Col>
+                        <Col sm={1}>
+                        <h6>:</h6>
+                        <h6>:</h6>
+                        <h6>:</h6>
+                        <h6>:</h6>
+                        <h6>:</h6>
+                        <h6>:</h6>
+                        </Col>
+                        <Col></Col>
                         </Row>
                     </div>
                     </Col>

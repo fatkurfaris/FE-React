@@ -7,7 +7,8 @@
 }
 
 .cardM{
-    margin-bottom: 55px;
+    padding-bottom: 60px;
+    
 }
 
 .ton{
@@ -24,4 +25,8 @@
 .cardN{
     color: white;
     background-color: blue;
+}
+
+.backg{
+    background-color: rgb(228, 232, 250);
 }

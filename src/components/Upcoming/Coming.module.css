@@ -7,14 +7,18 @@
 
 .space{
     padding-top: 9px;
+    
 }
 
 .but{
-    /* margin-left: 45px; */
+    margin-left: 45px;
+    /* box-shadow: 5px 10px rgb(0, 0, 0); */
+    
 }
 
 .cardM{
-    margin-bottom: 55px;
+    padding-bottom: 80px;
+    
 }
 
 .ton{
@@ -23,4 +27,13 @@
     color: white;
     font-family: 'Roboto', sans-serif;
     background-color: rgba(15, 58, 121, 1);
+}
+
+.backg{
+    background-color: rgb(228, 232, 250);
+}
+
+.shadow{
+    box-shadow: 2   px 4px rgb(255, 255, 255);
+    
 }
