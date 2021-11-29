@@ -10,43 +10,35 @@ import React from "react";
 // import style from './Detail.module.css'
 // import Gambar1 from '../../img/movie-theater-g39fcba8ce_1920.jpg'
 
-const Desc=({data})=>{
-    const {
-        
-        id, 
-        Cast,
-        Director,
-        Duration,
-        Genre,
-        Img,
-        Producers,
-        Production,
-        Rate,
-        Sinopsis,
-        Title,
-        Trailer,
-        Writer
-    }=useParams();
+export default function Desc({data}){
+    const {id}=useParams();
+    const {Cast}=useParams()
+    const testing = data.Movie
     console.log({data});
-    console.log({id,Cast});
+    console.log(data.Movie);
+    console.log(id);
+    console.log({testing});
 
 
     return(
-        // {data.filter(card=>card.title === title).map((card,index)=>(
+        // {data.filter(car d=>card.title === title).map((card,index)=>(
         //     <div key={index} className="fullcard">
         //         <h1>{card.title}</h1>
         //         <p>{card.description}</p>
         //     </div>
         // ))}
-        <>
+       <>
         <div>
-            {data.filter(descs=>descs.id===id).map((descs,index)=>(
-                <div key={index}>
-                    <h1>{descs.id}</h1>
+            <h1>sadasda</h1>
+            {testing.filter(index=>index.id===id).map((detail,index)=>(
+                <div>
+                <p>asd</p>
+        
+                    <h1>{index.id}asda</h1>
                 </div>
             ))}
         </div>
-        </>
+       </>
         // <div>
             
         //     <div>
@@ -143,5 +135,3 @@ const Desc=({data})=>{
         // </div>
     )
 }
-
-export default Desc;

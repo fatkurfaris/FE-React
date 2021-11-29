@@ -54,6 +54,7 @@ export default function Now(){
                     </div>        
                         <Row className={style.box}>
                         {data?.Movie.map((index,keys)=>(
+                        <div key={index}>
                         <Col xs={22} md={3} className={style.space}>
                             <Card style={{ width: '18rem' }} >
                             <Card.Img variant="top" src={index.Img} />
@@ -86,6 +87,7 @@ export default function Now(){
                             </Card.Body>
                             </Card>
                         </Col>
+                        </div>
                         ))}
                         </Row>    
             </Container>
