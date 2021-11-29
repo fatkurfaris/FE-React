@@ -53,9 +53,9 @@ export default function Coming(){
                             <Card style={{ width: '18rem' }}  className={style.shadow}>
                             <Card.Img variant="top" src="holder.js/100px180" />
                             <Card.Body>
-                                <Card.Title>{v.Title}</Card.Title>
+                                <Card.Title> <h5 className={style.text}>{v.Title}</h5> </Card.Title>
                                 <Card.Text>
-                                {v.Sinopsis}
+                                <p className={style.text}>{v.Sinopsis}</p> 
                                 </Card.Text>
                                 <Button variant="primary"><link rel="stylesheet" href="Description" />Go somewhere</Button>
                             </Card.Body>

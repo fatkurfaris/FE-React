@@ -37,3 +37,10 @@
     box-shadow: 2   px 4px rgb(255, 255, 255);
     
 }
+
+.text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  }

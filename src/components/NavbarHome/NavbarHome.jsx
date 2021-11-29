@@ -24,6 +24,9 @@ export default function NavbarHome(){
       <Nav.Link href="Login">Login</Nav.Link>
       <Nav.Link href="Upcoming">Upcoming</Nav.Link>
       <Nav.Link href="About">About</Nav.Link>
+      <Nav.Link href="Description">Description</Nav.Link>
+      <Nav.Link href="Screen">Screen</Nav.Link>
+      <Nav.Link href="Detail">Detail</Nav.Link>
     </Nav>
   </Navbar.Collapse>
   </Container>
