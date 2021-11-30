@@ -10,8 +10,6 @@ import { Link } from 'react-router-dom'
 import { gql,useQuery } from '@apollo/client'
 import Desc from '../Desc/Desc'
 
-// import { LOAD_MOVIE } from '../../GraphQL/Graph/query'
-// import {Link} from 'react-bootstrap'
 
 export const LOAD_MOVIE = gql `
 query Movie {
@@ -41,7 +39,8 @@ export default function Now(){
         console.log(error)
         return null
       }
-
+    //   console.log("ini now");
+    //   console.log({data});
     
     return (
         <div>
@@ -49,45 +48,23 @@ export default function Now(){
                 <Container className={style.cardM}>
                     <div className={style.but}> 
                         <button className={style.ton}>
-                            NowPlaying
+                            Now Playing
                         </button>
                     </div>        
                         <Row className={style.box}>
-                        {data?.Movie.map((index,keys)=>(
-                        <div key={index}>
+                        {data?.Movie.map((v)=>(
                         <Col xs={22} md={3} className={style.space}>
-                            <Card style={{ width: '18rem' }} >
-                            <Card.Img variant="top" src={index.Img} />
+                            <Card style={{ width: '18rem' }} className={style.shadow} >
+                            <Card.Img variant="top" src={v.Img} className={style.ukuran}/>
                             <Card.Body>
-                                <Image src="http://image-react.rf.gd/dune.jpg"/>
-                                <img src={index.Img} alt="" />
-                                <Card.Title> <h5 >{index.Title}</h5> </Card.Title>
+                                <Card.Title> <h5 >{v.Title}</h5> </Card.Title>
                                 <Card.Text>
-                                <p className={style.text}>{index.Sinopsis}</p>
+                                <p className={style.text}>{v.Sinopsis}</p>
                                 </Card.Text>
-                                <div> <Link to={`/Desc/${index.id}`}><Button>Click Here</Button></Link> </div>
-                                {/* <Desc
-                                id={v.id}
-                                Cast={v.Cast}
-                                Director={v.Director}
-                                Duration={v.Duration}
-                                Genre={v.Genre}
-                                Img={v.Img}
-                                Producers={v.Producers}
-                                Production={v.Production}
-                                Rate={v.Rate}
-                                Sinopsis={v.Sinopsis}
-                                Title={v.Title}
-                                Trailer={v.Trailer}
-                                Writer={v.Writer}
-                                /> */}
-                                {/* <div> <Link to={"/Description/"+v.id}><Button>{data? <Desc v={v.id}/> : null}</Button></Link> </div> */}
-                                
-                                {/* <Button variant="primary"><link href={"/id/"+v.id}/>{v.Title} </Button> */}
+                                <div> <Link to={`/Description/${v.id}`}><Button>Click Here</Button></Link> </div>
                             </Card.Body>
                             </Card>
                         </Col>
-                        </div>
                         ))}
                         </Row>    
             </Container>

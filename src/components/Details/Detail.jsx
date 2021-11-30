@@ -1,4 +1,5 @@
 import React from "react";
+import {Link, useParams} from 'react-router-dom'
 import { Container } from "react-bootstrap";
 import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
@@ -9,26 +10,26 @@ import {Image} from 'react-bootstrap'
 import style from './Detail.module.css'
 import Gambar1 from '../../img/movie-theater-g39fcba8ce_1920.jpg'
 
-export default function Details(){
+export default function Details({data}){
+    const {id}= useParams();
+    const testing = data.Movie
+    console.log({data});
+    
     return(
         <div>
+            {testing.filter(index=>index.id==id).map((index,detail)=>(
             <div>
                 <Container className={style.space}>
                     <div>
-                          <h3 className={style.text}>Title</h3>
+                          <h3 className={style.text}>{index.Title}</h3>
                     </div>    
                 <Row>
                     <Col xs={6} md={6}>
                       
                       <div className={style.box}>
                           <div className={style.box2}>
-                            <Image src={Gambar1} width="99%   "/>
+                            <Image src={index.Img} width="80%   "/>
                             <Row className={style.space4}>
-                                {/* <Col md={4}></Col> */}
-                                <Col  className={style.mid}> 
-                                    <h4>Location</h4>
-                                </Col>
-                                {/* <Col md={6} ></Col> */}
                             </Row>
                             <Row className={style.space4}>
                                 {/* <Col md={4}></Col> */}
@@ -38,50 +39,78 @@ export default function Details(){
                                          Payment
                                     </Button>
                                 </Col>
-                                {/* <Col md={6} ></Col> */}
                             </Row>
-                            
                           </div>
-
                       </div>
                     </Col>
                     <Col xs={6} md={6} className={style.space4}>
-
                     <div>
+                        
                         <Row>
-                            <Col sm={1}></Col>
-                            <Col sm={4}>
+                            <Col sm={6}>
                             <h4 className={style.minute}>
-                                Minute
+                                {index.Duration} Minute
                                 </h4>
-                                <h4 className={style.minute}>
-                                Rate
-                                </h4>
-                                
-                                <Button className={style.Seat}>
-                                    Seat
-                                </Button >
                                 <h4 className={style.minute}>
                                 Rp.1500000
                                 </h4>
-                                <Form.Select aria-label="Default select example" className={style.text1}>
+                                
+                            </Col>
+                            <Col sm={6}>  
+                            <h4 className={style.minute}>
+                                {index.Rate}
+                                </h4> 
+                                <Link to={`/Description/${index.id}/Detail/Screen`}><Button className={style.Seat}>Seat</Button></Link>
+                            </Col>
+                            {/* <Col sm={3}></Col> */}
+                        </Row>
+                        <Row className={style.space6}>
+                                <Col sm={3} className={style.kiri}> <h5>Genre</h5></Col>
+                                <Col sm={1}><h5>:</h5></Col>
+                                <Col className={style.kiri}><h5>{index.Genre}</h5></Col>
+                            </Row>
+                            <Row>
+                                <Col sm={3} className={style.kiri}> <h5>Producer</h5></Col>
+                                <Col sm={1}><h5>:</h5></Col>
+                                <Col className={style.kiri}><h5>{index.Producers}</h5></Col>
+                            </Row>
+                            <Row>
+                                <Col sm={3} className={style.kiri}> <h5>Director</h5></Col>
+                                <Col sm={1}><h5>:</h5></Col>
+                                <Col className={style.kiri}><h5>{index.Directors}</h5></Col>
+                            </Row>
+                            <Row>
+                                <Col sm={3} className={style.kiri}> <h5>Writer</h5></Col>
+                                <Col sm={1}><h5>:</h5></Col>
+                                <Col className={style.kiri}><h5>{index.Writer}</h5></Col>
+                            </Row>
+                            <Row>
+                                <Col sm={3} className={style.kiri}> <h5>Production</h5></Col>
+                                <Col sm={1}><h5>:</h5></Col>
+                                <Col className={style.kiri}><h5>{index.Production}</h5></Col>
+                            </Row>
+                            <Row>
+                                <Col sm={3} className={style.kiri}> <h5>Castn</h5></Col>
+                                <Col sm={1}><h5>:</h5></Col>
+                                <Col className={style.kiri}><h5>{index.Cast}</h5></Col>
+                            </Row>
+                            <Row>
+                                <Col sm={3} className={style.kiri}> <h5>Sinopsis</h5></Col>
+                                <Col sm={1}><h5>:</h5></Col>
+                                <Col className={style.kiri}><h5>{index.Sinopsis}</h5></Col>
+                            </Row>
+                    </div>
+                    <Form.Select aria-label="Default select example" className={style.text1}>
                                     <option >Payment Method</option>
                                     <option value="1">One</option>
                                     <option value="2">Two</option>
                                     <option value="3">Three</option>
-                                </Form.Select>
-                            </Col>
-                            <Col sm={4}>
-                                
-                            </Col>
-                            <Col sm={3}></Col>
-                        </Row>
-                    </div>
-                    </Col>
+                    </Form.Select>
+                    </Col>  
                     
                 </Row>
                 </Container>
-                <div>
+                {/* <div>
                     <Container>
                         <Row>
                             <Col>
@@ -90,19 +119,13 @@ export default function Details(){
                         </Row>
                         <Row>
                             <Col className={style.space5}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                sed do eiusmod tempor incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit
-                                esse cillum dolore eu fugiat nulla pariatur. Excepteur 
-                                sint occaecat cupidatat non proident, sunt in culpa qui
-                                officia deserunt mollit anim id est laborum.
+                                {index.Sinopsis}
                             </Col>
                         </Row>
                     </Container>
-                </div>
+                </div> */}
             </div>
+            ))}
         </div>
     )
 }

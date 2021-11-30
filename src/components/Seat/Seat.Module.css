@@ -1,7 +1,8 @@
 .mid{
     text-align: center;
     align-items: center;
-
+    /* display: flex;
+    flex-direction: row; */
 }
 
 .kanan{
@@ -24,6 +25,21 @@
     padding-bottom: 60px;
 }
 
+.space4{
+    margin-top: 15px;
+}
+
+.space5{
+    margin-top: 15px;
+    color: white;
+    background-color: red;
+}
+
+.space5:hover{
+    margin-top: 15px;
+    color: white
+}
+
 .done{
     background-color: red;
 }
@@ -40,3 +56,4 @@
     width: 0px;
     margin-left: 210px;
 }
+

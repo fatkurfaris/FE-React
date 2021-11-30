@@ -16,8 +16,9 @@ export default function Homess(){
                     <Col sm={7}>
                     <div>
                         <h4 className={style.text1}>Welcome to BeeMovie</h4>
-                        <h4 className={style.text4}> a Place for watching movie</h4>
-                        <h4 className={style.text5}>with family or friend</h4>
+                        <h4 className={style.text4}> A Place for Enjoy and Watching some Movie</h4>
+                        <h4 className={style.text5}>with Our Family or Friend</h4>
+                        
                         <div className={style.space1}>
                             <input className={style.box} type="text" placeholder="Search Title"/>
                         </div>

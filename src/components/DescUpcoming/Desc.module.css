@@ -15,6 +15,7 @@
 
 .space3{
     margin-top: 15px;
+    
 }
 .space4{
     padding-top: 9px;
@@ -23,10 +24,6 @@
 .space5{
     font-family: 'Roboto', sans-serif; 
     padding-bottom: 65px;
-}
-
-.space6{
-    margin-top: 30px;
 }
 
 /* .box{
@@ -96,11 +93,10 @@
 .Seat{
     background-color: white;
     color: rgba(15, 58, 121, 1);
-    padding: 12px 120px 12px 120px ;
+    padding: 5px 65px 5px 65px ;
     margin-bottom: 10px;
     font-family: 'Roboto' sans-serif;
     font-weight: 900;
-    
 }
 
 .submit{
@@ -113,5 +109,4 @@
 .text1{
     color: rgba(15, 58, 121, 1);
     font-family: 'Roboto' sans-serif;
-    margin-top: 30px;
 }

@@ -6,6 +6,7 @@ import {Card} from 'react-bootstrap'
 import {Button} from 'react-bootstrap'
 import style from './Coming.module.css'
 import { gql,useQuery } from '@apollo/client'
+import { Link } from 'react-router-dom'
 
 
 
@@ -30,12 +31,15 @@ query Upcoming {
 `
 
 export default function Coming(){
-    const {data,error}= useQuery (LOAD_UPCOMING);
+    const {data,error}= useQuery(LOAD_UPCOMING);
+    const {testing}=useQuery(LOAD_UPCOMING);
 
     if(error) {
         console.log(error)
         return null
       }
+    //   console.log("ini upcoming");
+    //   console.log({data});
 
     return (
        
@@ -44,89 +48,24 @@ export default function Coming(){
                 <Container className={style.cardM}>
                     <div className={style.but}> 
                         <button className={style.ton}>
-                            <link rel="style    sheet" href="Description" />Upcoming
+                            Upcoming
                         </button>
                     </div>
                     <Row className={style.box}>
-                        {data?.Upcoming.map((v)=>(
+                        {data?.Upcoming.map((c)=>(
                         <Col xs={18} md={3} className={style.space}>
                             <Card style={{ width: '18rem' }}  className={style.shadow}>
-                            <Card.Img variant="top" src="holder.js/100px180" />
+                            <Card.Img variant="top" src={c.Img} className={style.ukuran}/>
                             <Card.Body>
-                                <Card.Title> <h5 className={style.text}>{v.Title}</h5> </Card.Title>
+                                <Card.Title> <h5 className={style.text}>{c.Title}</h5> </Card.Title>
                                 <Card.Text>
-                                <p className={style.text}>{v.Sinopsis}</p> 
+                                <p className={style.text}>{c.Sinopsis}</p> 
                                 </Card.Text>
-                                <Button variant="primary"><link rel="stylesheet" href="Description" />Go somewhere</Button>
+                                <div> <Link to={`/DescribeUpcoming/${c.id}`}><Button>Click Here</Button></Link> </div>    
                             </Card.Body>
                             </Card>
                         </Col>
                         ))}
-                        {/* <Col xs={18} md={3} className={style.space}>
-                            <Card style={{ width: '18rem' }}  className={style.shadow}>
-                            <Card.Img variant="top" src="holder.js/100px180" />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                                </Card.Text>
-                                <Button variant="primary"><link rel="stylesheet" href="Description" />Go somewhere</Button>
-                            </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xs={18} md={3} className={style.space}>
-                        <Card style={{ width: '18rem' }}  className={style.shadow}>
-                            <Card.Img variant="top" src="holder.js/100px180" />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                                </Card.Text>
-                                <Button variant="primary"><link rel="stylesheet" href="Description" />Go somewhere</Button>
-                            </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xs={18} md={3} className={style.space}>
-                        <Card style={{ width: '18rem' }}  className={style.shadow}>
-                            <Card.Img variant="top" src="holder.js/100px180" />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                                </Card.Text>
-                                <Button variant="primary"><link rel="stylesheet" href="Description" />Go somewhere</Button>
-                            </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xs={18} md={3} className={style.space}>
-                        <Card style={{ width: '18rem' }}  className={style.shadow}>
-                            <Card.Img variant="top" src="holder.js/100px180" />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                                </Card.Text>
-                                <Button variant="primary"><link rel="stylesheet" href="Description" />Go somewhere</Button>
-                            </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xs={18} md={3} className={style.space}>
-                        <Card style={{ width: '18rem' }}  className={style.shadow}>
-                            <Card.Img variant="top" src="holder.js/100px180" />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                                </Card.Text>
-                                <Button variant="primary"><link rel="stylesheet" href="Description" />Go somewhere</Button>
-                            </Card.Body>
-                            </Card>
-                        </Col> */}
                     </Row>
                 </Container>
             </div>    

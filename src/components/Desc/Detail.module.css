@@ -15,6 +15,7 @@
 
 .space3{
     margin-top: 15px;
+    padding-bottom: 20px;
 
 }
 .space4{
@@ -58,6 +59,22 @@
     font-family: 'Roboto', sans-serif; 
 }
 
+.text2{
+    color: white;
+    font-family: 'Roboto' sans-serif;
+
+}
+
+a:hover {
+    /* background-color: yellow; */
+    color: white;
+  }
+
+a:link{
+    color: white;
+}
+
+
 .roboto{
     font-family: 'Roboto', sans-serif; 
 }
@@ -85,3 +102,4 @@
     color: rgba(15, 58, 121, 1) ;
     background-color: rgba(15, 58, 121, 1);
 }
+

@@ -11,7 +11,7 @@
 }
 
 .but{
-    margin-left: 45px;
+    /* margin-left: 45px; */
     /* box-shadow: 5px 10px rgb(0, 0, 0); */
     
 }
@@ -21,12 +21,16 @@
     
 }
 
+
 .ton{
     margin: 45px;
     padding: 9px 15px 9px 15px;
     color: white;
+    font-weight: 500;
     font-family: 'Roboto', sans-serif;
+    font-size: 20px;
     background-color: rgba(15, 58, 121, 1);
+    border-radius: 5px;
 }
 
 .backg{
@@ -34,7 +38,8 @@
 }
 
 .shadow{
-    box-shadow: 2   px 4px rgb(255, 255, 255);
+    border: 1px solid;
+    box-shadow: 3px 3px  black;
     
 }
 
@@ -43,4 +48,8 @@
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+  }
+
+  .ukuran{
+      height: 400px;
   }

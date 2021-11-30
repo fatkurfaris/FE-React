@@ -1,13 +1,18 @@
 import React from "react"
 import style from './Seat.Module.css'
 import{Row,Col, Button} from 'react-bootstrap'
+import Check from "./Check"
 
 export default function Seat(){
+    let kursi= "A01"
+    let kursi2= "A02"
+    console.log("ini kursi");
+    console.log({kursi});
     return(
         <div>
             <div>
 
-                <Row>
+               
                 <Row>
                 <Col sm={2} className={style.kanan}> 
                     <div className={style.garis_verikal1}></div>   
@@ -15,14 +20,43 @@ export default function Seat(){
                 
                 <Col sm={9} className={style.mid}>
                     
-                    <Row className={style.space}>
-                    <Col sm={4} className={style.mid}>
-                    <Button className={style.undone}>A01</Button>   
-                    <Button className={style.undone}>A02</Button> 
-                    <Button className={style.undone}>A03</Button>
+                    <Row>
                     
-                    </Col>
                     <Col sm={4} className={style.mid}>
+                    <Row>
+                        <Col sm={3}></Col>
+                        <Col sm={2}><Check kursi={kursi}/></Col>
+                        <Col sm={2}><Check kursi={kursi}/></Col>
+                        <Col sm={2}><Check kursi={kursi2}/></Col>
+                        <Col sm={3}></Col>
+                    </Row>
+                    </Col>
+
+                    <Col sm={4} className={style.mid}>
+                    <Row>
+                        <Col sm={1}></Col>
+                        <Col sm={2}><Check kursi={kursi}/></Col>
+                        <Col sm={2}><Check kursi={kursi}/></Col>
+                        <Col sm={2}><Check kursi={kursi}/></Col>
+                        <Col sm={2}><Check kursi={kursi}/></Col>
+                        <Col sm={2}><Check kursi={kursi}/></Col>
+                        <Col sm={1}></Col>
+                    </Row>
+                    </Col>
+
+                    <Col sm={4} className={style.mid}>
+                    <Row>
+                        <Col sm={3}></Col>
+                        <Col sm={2}><Check kursi={kursi}/></Col>
+                        <Col sm={2}><Check kursi={kursi}/></Col>
+                        <Col sm={2}><Check kursi={kursi}/></Col>
+                        <Col sm={3}></Col>
+                    </Row>
+                    </Col>
+                    
+                   
+
+                    {/* <Col sm={4} className={style.mid}>
                     <Button className={style.undone}>A04</Button>   
                     <Button className={style.undone}>A05</Button> 
                     <Button className={style.undone}>A06</Button> 
@@ -33,7 +67,7 @@ export default function Seat(){
                     <Button className={style.undone}>A09</Button> 
                     <Button className={style.undone}>A010</Button>   
                     <Button className={style.undone}>A011</Button> 
-                    </Col>
+                    </Col> */}
                     </Row>
 
                     <Row className={style.space2}>
@@ -196,7 +230,7 @@ export default function Seat(){
                 </Row>
 
                 </Row>
-                </Row>
+                
 
 
                 <div className={style.space3}></div>
