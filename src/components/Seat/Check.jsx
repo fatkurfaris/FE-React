@@ -3,8 +3,11 @@ import React from "react";
 import { useState,useRef } from "react";
 import {Button,Popover,Overlay, ButtonGroup, ToggleButton} from 'react-bootstrap'
 import style from './Seat.Module.css'
+import {Link} from 'react-router-dom'
+import { useParams } from "react-router";
 
 export default function Check({kursi}) {
+    const {id}= useParams();
     const [show, setShow] = useState(false);
     const [seat, setSeat] = useState(false);
     // const [radioValue, setRadioValue] = useState('1');
@@ -22,12 +25,21 @@ export default function Check({kursi}) {
     //   console.log("inikursi2");
     //   console.log({kursi});
     };
-    const handleSeat= (event) => {
-        setSeat(seat);
-      //   console.log("inikursi2");
-      //   console.log({kursi});
+    const handleSeat= ({kursi}) => {
+            console.log("ini luar kursi");
+            console.log({kursi});
+        if (typeof(Storage) !== "undefined") {
+            console.log("ini dalem kursi");
+            console.log({kursi});
+            // Store
+            localStorage.setItem("Seat", {kursi});
+            // Retrieve
+            
+          }
+          
       };
     return (
+        
       <div ref={ref}>
         <Button className={style.undone} onClick={handleClick}>{kursi} </Button>
         <Overlay
@@ -40,7 +52,11 @@ export default function Check({kursi}) {
             <Popover.Header as="h3">Chose Your Seat</Popover.Header>
             <Popover.Body>
              Are You Sure for Pick This Seat? <strong>{kursi}</strong> 
-             <Button className={style.space4} onClick={handleSeat}>Yes</Button>
+             <Link to={`/Description/${id}/Detail`}>
+                 <Button className={style.space4} onClick={handleSeat}> Yes</Button>
+            </Link>
+                
+                 
              <Button className={style.space5}>No</Button>
             </Popover.Body>
           </Popover>

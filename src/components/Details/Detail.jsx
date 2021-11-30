@@ -14,9 +14,20 @@ export default function Details({data}){
     const {id}= useParams();
     const testing = data.Movie
     console.log({data});
-    
+    console.log(localStorage.getItem("Seat"));
+    var retrievedObject=localStorage.getItem("Seat")
+    console.log({retrievedObject});
     return(
         <div>
+            <div id="result">tesss</div>
+            <div id="result">tesss</div>
+            <div id="result">tesss</div>
+            <div id="result">tesss</div>
+            <div id="result">tesss</div>
+            
+            {localStorage.getItem("Seat")}
+            <div id="Seat"></div>
+
             {testing.filter(index=>index.id==id).map((index,detail)=>(
             <div>
                 <Container className={style.space}>

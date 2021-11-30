@@ -12,14 +12,14 @@ import Gambar1 from '../../img/movie-theater-g39fcba8ce_1920.jpg'
 
 export default function Desc({data}){
     const {id}=useParams();
-    const testing = data.Movie
+    const testing = data?.Movie
 
     console.log({data});
 
     return(
         <div>
             {/* {console.log("t", testing.filter(index=>index.id==id))} */}
-            {testing.filter(index=>index.id==id).map((index,detail)=>(
+            {testing?.filter(index=>index.id==id).map((index,detail)=>(
             <div>  
                 <div>
                     <Container className={style.space}>
