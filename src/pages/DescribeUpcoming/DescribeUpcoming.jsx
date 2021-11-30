@@ -4,11 +4,11 @@ import Footer from "../../components/Footer/Footer";
 import NavbarDetail from "../../components/NavbarDetail/NavbarDetail";
 import NavbarHome from "../../components/NavbarHome/NavbarHome";
 
-export default function DescribeUpcoming(UpData){
+export default function DescribeUpcoming({upData}){
     return(
         <>
             <NavbarDetail/>
-            <DescUpcoming UpData={UpData}/>
+            <DescUpcoming upData={upData}/>
             <Footer/>
         </>
     )

@@ -14,9 +14,11 @@ export default function Desc({data}){
     const {id}=useParams();
     const testing = data.Movie
 
+    console.log({data});
+
     return(
         <div>
-            {console.log("t", testing.filter(index=>index.id==id))}
+            {/* {console.log("t", testing.filter(index=>index.id==id))} */}
             {testing.filter(index=>index.id==id).map((index,detail)=>(
             <div>  
                 <div>
@@ -30,24 +32,12 @@ export default function Desc({data}){
                               <div className={style.box2}>
                                 <Image src={index.Img   } width="70%   "/>
                                 <Row className={style.space4}>
-                                    {/* <Col md={4}></Col> */}
                                     <Col  className={style.kanan}> 
-                                        {/* <Button variant="dark">
-                                            <link rel="stylesheet" href={index.Trailer} />
-                                             Trailer
-                                        </Button> */}
                                         <Link to={`/Description/${index.id}/Detail`}><Button>Buy Here</Button></Link>
                                     </Col>
                                     <Col className={style.kiri}>  
-                                        {/* <Button variant="dark">
-                                            <link rel="stylesheet" href="Description" />
-                                             Buy Ticket
-                                        </Button> */}
                                         <a href={index.Trailer} target="_blank" rel="noopener noreferrer"><Button className={style.text2}>Trailer</Button></a>
-                                        
-                                        {/* <Link to={`/index.Trailer`}><Button>Trailer</Button></Link> */}
                                     </Col>
-                                    {/* <Col md={6} ></Col> */}
                                 </Row>
                               </div>
                           </div>
@@ -63,9 +53,9 @@ export default function Desc({data}){
                             />
                         </Form>
                         <div>
-                            <h2 className={style.space3}>
+                            <h4 className={style.space3}>
                                 {index.Title}
-                            </h2>
+                            </h4>
                             <Row>
                                 <Col sm={3} className={style.kiri}> <h5>Genre</h5></Col>
                                 <Col sm={1}><h5>:</h5></Col>
@@ -101,44 +91,10 @@ export default function Desc({data}){
                                 <Col sm={1}><h5>:</h5></Col>
                                 <Col className={style.kiri}><h5>{index.Sinopsis}</h5></Col>
                             </Row>
-
-                            {/* <h5>Producer</h5>
-                            <h5>Sutradara</h5>
-                            <h5>Penulis</h5>
-                            <h5>Produksi</h5>
-                            <h5>Cast</h5>
-                            </Col> */}
-                            
-                            {/* <h5>:</h5>
-                            <h5>:</h5>
-                            <h5>:</h5>
-                            <h5>:</h5>
-                            <h5>:</h5> */}
-                           
-                            {/* <h5>{index.Producers}</h5>
-                            <h5>{index.Directors}</h5>
-                            <h5>{index.Writer}</h5>
-                            <h5>{index.Production}</h5>
-                            <h5>{index.Cast}</h5> */}
-                           
                         </div>
                         </Col> 
                     </Row>
                     </Container>
-                    {/* <div>
-                        <Container>
-                            <Row>
-                                <Col>
-                                    Sinopsis
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col className={style.space5}>
-                                    {index.Sinopsis}
-                                </Col>
-                            </Row>
-                        </Container>
-                    </div> */}
                 </div>
             </div>
             ))}

@@ -57,22 +57,23 @@ query Upcoming {
 
 function App() {
 
-  const {up} = useQuery(LOAD_UPCOMING)
+  const {data:upData} = useQuery(LOAD_UPCOMING)
   const {data} = useQuery(LOAD_MOVIE)
 
-  console.log("testApp");
-  console.log(up);
-  console.log("testApp2");
-  console.log(data);
+  // console.log("testApp");
+  // console.log(upData);
+  // console.log("testApp2");
+  // console.log(data);
   
   return (
-  <BrowserRouter>
+    <>
+     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/About" element={<About/>} />
       <Route path="/Login" element={<Login/>} />
       {/* <Route path="/Description/:id" element={<Description/>} /> */}
-      <Route path="/DescribeUpcoming/:id" element={<DescribeUpcoming UpData={up} />} />
+      <Route path="/DescribeUpcoming/:id" element={<DescribeUpcoming upData={upData} />} />
 
       <Route path="/Description/:id" element={<Description data={data} />} />
       <Route path="/Description/:id/Detail" element={<Detail data={data} />} />
@@ -85,6 +86,8 @@ function App() {
 
     </Routes>
     </BrowserRouter>
+    </>
+ 
 
 
 

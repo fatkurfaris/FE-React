@@ -10,49 +10,37 @@ import {Image} from 'react-bootstrap'
 import style from './Desc.module.css'
 import Gambar1 from '../../img/movie-theater-g39fcba8ce_1920.jpg'
 
-export default function DescUpcoming({UpData}){
+export default function DescUpcoming({upData}){
     const {id}=useParams();
-    // const Up = data.Upcoming
-    console.log("ini Up");
-    console.log({id});
+    const Up = upData.Upcoming
+    // console.log("ini Up");
+    // console.log({id});
     
-    console.log({UpData});
+    // console.log(upData);
     // console.log({Up});
-    console.log({id});
+    // console.log({id});
+    {console.log({upData})}
 
     return(
         <div>
-            {/* {console.log("t", Up.filter(index=>index.id==id))} */}
-            {UpData.filter(index=>index.id==id).map((index,detail)=>(
+            {/* {console.log("t", Up.filter(index=>index.id==id))}
+            {console.log("testing")} */}
+            {Up.filter(index=>index.id==id).map((index,detail)=>(
             <div>  
                 <div>
                     <Container className={style.space}>
                     <Row>
                         <Col xs={6} md={6}>
                           <div>
-                              <h3 className={style.text}>Now Playing</h3>
+                              <h3 className={style.text}>Coming Soon</h3>
                           </div>
                           <div className={style.box}>
                               <div className={style.box2}>
-                                <Image src={Gambar1} width="99%   "/>
+                                <Image src={index.Img} width="71%"/>
                                 <Row className={style.space4}>
-                                    {/* <Col md={4}></Col> */}
-                                    <Col  className={style.kanan}> 
-                                        {/* <Button variant="dark">
-                                            <link rel="stylesheet" href={index.Trailer} />
-                                             Trailer
-                                        </Button> */}
-                                        <Link to={`/Description/${index.id}/Detail`}><Button>Buy Here</Button></Link>
+                                    <Col className={style.mid}>  
+                                        <a href={index.Trailer} target="_blank" rel="noopener noreferrer"><Button className={style.text2}>Trailer</Button></a>
                                     </Col>
-                                    <Col className={style.kiri}>  
-                                        {/* <Button variant="dark">
-                                            <link rel="stylesheet" href="Description" />
-                                             Buy Ticket
-                                        </Button> */}
-                                        <a href="index.Trailer" target="_blank" rel="noopener noreferrer">here</a>
-                                        {/* <Link to={`/index.Trailer`}><Button>Trailer</Button></Link> */}
-                                    </Col>
-                                    {/* <Col md={6} ></Col> */}
                                 </Row>
                               </div>
                           </div>
@@ -71,49 +59,46 @@ export default function DescUpcoming({UpData}){
                             <h4 className={style.space3}>
                                 {index.Title}
                             </h4>
+                            <Row className={style.space4}>
+                                <Col sm={3} className={style.kiri}> <h5>Genre</h5></Col>
+                                <Col sm={1}><h5>:</h5></Col>
+                                <Col className={style.kiri}><h5>{index.Genre}</h5></Col>
+                            </Row>
                             <Row>
-                            <Col sm={3} className={style.kiri}>
-                            <h6>Genre</h6>
-                            <h6>Producer</h6>
-                            <h6>Sutradara</h6>
-                            <h6>Penulis</h6>
-                            <h6>Produksi</h6>
-                            <h6>Cast</h6>
-                            </Col>
-                            <Col sm={1}>
-                            <h6>:</h6>
-                            <h6>:</h6>
-                            <h6>:</h6>
-                            <h6>:</h6>
-                            <h6>:</h6>
-                            <h6>:</h6>
-                            </Col>
-                            <Col className={style.kiri}>
-                            <h6>{index.Genre}</h6>
-                            <h6>{index.Producers}</h6>
-                            <h6>{index.Directors}</h6>
-                            <h6>{index.Writer}</h6>
-                            <h6>{index.Production}</h6>
-                            <h6>{index.Cast}</h6></Col>
+                                <Col sm={3} className={style.kiri}> <h5>Producer</h5></Col>
+                                <Col sm={1}><h5>:</h5></Col>
+                                <Col className={style.kiri}><h5>{index.Producers}</h5></Col>
+                            </Row>
+                            <Row>
+                                <Col sm={3} className={style.kiri}> <h5>Director</h5></Col>
+                                <Col sm={1}><h5>:</h5></Col>
+                                <Col className={style.kiri}><h5>{index.Directors}</h5></Col>
+                            </Row>
+                            <Row>
+                                <Col sm={3} className={style.kiri}> <h5>Writer</h5></Col>
+                                <Col sm={1}><h5>:</h5></Col>
+                                <Col className={style.kiri}><h5>{index.Writer}</h5></Col>
+                            </Row>
+                            <Row>
+                                <Col sm={3} className={style.kiri}> <h5>Production</h5></Col>
+                                <Col sm={1}><h5>:</h5></Col>
+                                <Col className={style.kiri}><h5>{index.Production}</h5></Col>
+                            </Row>
+                            <Row>
+                                <Col sm={3} className={style.kiri}> <h5>Castn</h5></Col>
+                                <Col sm={1}><h5>:</h5></Col>
+                                <Col className={style.kiri}><h5>{index.Cast}</h5></Col>
+                            </Row>
+                            <Row>
+                                <Col sm={3} className={style.kiri}> <h5>Sinopsis</h5></Col>
+                                <Col sm={1}><h5>:</h5></Col>
+                                <Col className={style.kiri}><h5>{index.Sinopsis}</h5></Col>
                             </Row>
                         </div>
                         </Col> 
                     </Row>
                     </Container>
-                    <div>
-                        <Container>
-                            <Row>
-                                <Col>
-                                    Sinopsis
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col className={style.space5}>
-                                    {index.Sinopsis}
-                                </Col>
-                            </Row>
-                        </Container>
-                    </div>
+
                 </div>
             </div>
             ))}

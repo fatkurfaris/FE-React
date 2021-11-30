@@ -31,15 +31,15 @@ query Upcoming {
 `
 
 export default function Coming(){
-    const {data,error}= useQuery(LOAD_UPCOMING);
+    const {data:upData}= useQuery(LOAD_UPCOMING);
     const {testing}=useQuery(LOAD_UPCOMING);
 
-    if(error) {
-        console.log(error)
-        return null
-      }
+    // if(error) {
+    //     console.log(error)
+    //     return null
+    //   }
     //   console.log("ini upcoming");
-    //   console.log({data});
+    //   console.log({upData});
 
     return (
        
@@ -52,7 +52,7 @@ export default function Coming(){
                         </button>
                     </div>
                     <Row className={style.box}>
-                        {data?.Upcoming.map((c)=>(
+                        {upData?.Upcoming.map((c)=>(
                         <Col xs={18} md={3} className={style.space}>
                             <Card style={{ width: '18rem' }}  className={style.shadow}>
                             <Card.Img variant="top" src={c.Img} className={style.ukuran}/>

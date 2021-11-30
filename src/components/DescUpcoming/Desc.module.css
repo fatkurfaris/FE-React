@@ -56,7 +56,7 @@
     font-weight: 700;
     font-size: 41px;
     font-family: 'Roboto', sans-serif; 
-    padding-bottom: 45px;
+    padding-bottom: 35px;
 }
 
 .roboto{
@@ -109,4 +109,5 @@
 .text1{
     color: rgba(15, 58, 121, 1);
     font-family: 'Roboto' sans-serif;
+    
 }

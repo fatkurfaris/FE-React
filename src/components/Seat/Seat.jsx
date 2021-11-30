@@ -26,13 +26,13 @@ export default function Seat(){
                     <Row>
                         <Col sm={3}></Col>
                         <Col sm={2}><Check kursi={kursi}/></Col>
-                        <Col sm={2}><Check kursi={kursi}/></Col>
-                        <Col sm={2}><Check kursi={kursi2}/></Col>
+                        {/* <Col sm={2}><Check  kursi={kursi}/></Col>
+                        <Col sm={2}><Check kursi={kursi2}/></Col> */}
                         <Col sm={3}></Col>
                     </Row>
                     </Col>
 
-                    <Col sm={4} className={style.mid}>
+                    {/* <Col sm={4} className={style.mid}>
                     <Row>
                         <Col sm={1}></Col>
                         <Col sm={2}><Check kursi={kursi}/></Col>
@@ -52,7 +52,7 @@ export default function Seat(){
                         <Col sm={2}><Check kursi={kursi}/></Col>
                         <Col sm={3}></Col>
                     </Row>
-                    </Col>
+                    </Col> */}
                     
                    
 
