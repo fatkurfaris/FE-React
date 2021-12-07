@@ -7,13 +7,29 @@
     
 }
 
-.text1{
+.space{
+    /* text-align: center;
+    align-items: center; */
+
+}
+
+
+.text{
     font-family: 'roboto', sans-serif;
     color: white;
     padding-top: 100px;
 }
 
-.text2{
+.text1{
+    font-family: 'roboto', sans-serif;
+    color: white;
+}
+
+.mid{
+    text-align: center;
+    align-items: center;
+}
+/* .text2{
     font-family: 'roboto', sans-serif;
     color: white;
     text-align: center;
@@ -24,10 +40,10 @@
     text-align: center;
 }
 
-.Mkanan{
+.Mkanan{ */
     /* margin-right: 55px; */
-    padding-right: 211px;
-}
+    /* padding-right: 211px;
+} */ 
 
 /* .background{
     background-color: ;

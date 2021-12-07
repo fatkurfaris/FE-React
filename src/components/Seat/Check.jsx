@@ -25,15 +25,15 @@ export default function Check({kursi}) {
     //   console.log("inikursi2");
     //   console.log({kursi});
     };
-    const handleSeat= ({kursi}) => {
+    const handleSeat= () => {
             console.log("ini luar kursi");
-            console.log({kursi});
+            console.log(kursi);
         if (typeof(Storage) !== "undefined") {
             console.log("ini dalem kursi");
-            console.log({kursi});
+            console.log(kursi);
             // Store
-            localStorage.setItem("Seat", {kursi});
-            // Retrieve
+            localStorage.setItem("Seat", kursi);
+            // Retrieve 
             
           }
           

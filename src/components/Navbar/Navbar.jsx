@@ -30,8 +30,9 @@ export default function Navbars(){
     <Nav className="me-auto"></Nav>
     <Nav>
       <Nav.Link href="/" className={style.text}>Home</Nav.Link>
-      <Nav.Link href="Login">Login</Nav.Link>
+      {/* <Nav.Link href="Login">Login</Nav.Link> */}
       <Nav.Link href="Movie">Movie</Nav.Link>
+      <Nav.Link href="Login">Login</Nav.Link>
       <Nav.Link href="Upcoming">Upcoming</Nav.Link>
       <Nav.Link href="About">About</Nav.Link>
     </Nav>

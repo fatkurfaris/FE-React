@@ -30,7 +30,7 @@ export default function Desc({data}){
                           </div>
                           <div className={style.box}>
                               <div className={style.box2}>
-                                <Image src={index.Img   } width="70%   "/>
+                                <Image src={index.Img  } width="70%   "/>
                                 <Row className={style.space4}>
                                     <Col  className={style.kanan}> 
                                         <Link to={`/Description/${index.id}/Detail`}><Button>Buy Here</Button></Link>

@@ -1,60 +1,45 @@
+import Button from '@restart/ui/esm/Button'
 import React from 'react'
-import { Col, Container,  Row } from 'react-bootstrap'
+import { Col, Container,  Row , Form} from 'react-bootstrap'
 import Navbars from '../../components/Navbar/Navbar'
 import style from './Login.module.css'
 
 export default function Login(){
     return (
         <div className={style.back}>
-            <div>
-                <div>
-                    
-                <div className={style.text1}>
-                                    <h4>Home</h4>
-                                    <h4>NowPlaying</h4>
-                                    <h4>Upcoming</h4>
-                                    <h4>About</h4>
-                                </div>
-                    <Container>
-                        <Row>
-                            <Col sm={2}>
-                                <div className={style.text1}>
-                                    <h4>Home</h4>
-                                    <h4>NowPlaying</h4>
-                                    <h4>Upcoming</h4>
-                                    <h4>About</h4>
-                                </div>
-                            </Col>
-                            <Col sm={3} className={style.tengah}>
-                                aasds
-                            </Col>
-                            <Col sm={2} className={style.tengah}>
-                                
-                            </Col>
-                            <Col sm={5}>
-                                <div>
-                                    <div className={style.text2}>
-                                    <h4 >-----Bioskop----</h4>
-                                    <h3 >BeeMovie</h3>
-                                    </div>
-                                    
-                                    
-                                    {/* <Row> */}
-                                    <label htmlFor="">Username</label><br />
-                                    <input type="text" className={style.Mkanan} />   <br />
-                                    {/* </Row> */}
-
-                                    <label htmlFor="">Username</label><br />
-                                    <input type="text" className={style.Mkanan} /><br />
-
-                                    <label htmlFor="">Login</label><br />
-                                    <input type="text" /><br />
-                                </div>
-                            </Col>
-                        </Row>
-                    </Container>
+            <Container>
+                <div className={style.mid}>
+                    <h2 className={style.text}>LOGIN</h2>
                 </div>
-            </div>
+            
+            <Row>
+            <Col sm={3}></Col>
+            <Col sm={6} className={style.space}>
+                <Form>
+                    <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
+                        <Form.Label className={style.text1}>
+                        Email
+                        </Form.Label>
+                        <Col sm="12">
+                        <Form.Control type="email" placeholder="email" />
+                        </Col>
+                 </Form.Group>
+
+                 <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword">
+                        <Form.Label className={style.text1}>
+                        Password
+                        </Form.Label>
+                        <Col sm="12">
+                        <Form.Control type="password" placeholder="Password" />
+                     </Col>
+                    </Form.Group>
+                    <Button>Submit</Button>
+                </Form>
+            </Col>
+            <Col sm={3}></Col>
+            </Row>
+            </Container>
+            
         </div>
     )
 }

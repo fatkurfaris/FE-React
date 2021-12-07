@@ -4,42 +4,110 @@ import{Row,Col, Button} from 'react-bootstrap'
 import Check from "./Check"
 
 export default function Seat(){
-    let kursi= "A01"
-    let kursi2= "A02"
-    console.log("ini kursi");
-    console.log({kursi});
+    let kursiA1= "A01" 
+    let kursiA2= "A02"
+    let kursiA3= "A03"
+    let kursiA4= "A04"
+    let kursiA5= "A05"
+    let kursiA6= "A06"
+    let kursiA7= "A07"
+    let kursiA8= "A08"
+    let kursiA9= "A09"
+    let kursiA10= "A10"
+    let kursiA11= "A11"
+    // console.log("ini kursi");
+    // console.log({kursi});
+    let kursiB1= "B01"
+    let kursiB2= "B02"
+    let kursiB3= "B03"
+    let kursiB4= "B04"
+    let kursiB5= "B05"
+    let kursiB6= "B06"
+    let kursiB7= "B07"
+    let kursiB8= "B08"
+    let kursiB9= "B09"
+    let kursiB10= "B10"
+    let kursiB11= "B11"
+
+    let kursiC1= "C01"
+    let kursiC2= "C02"
+    let kursiC3= "C03"
+    let kursiC4= "C04"
+    let kursiC5= "C05"
+    let kursiC6= "C06"
+    let kursiC7= "C07"
+    let kursiC8= "C08"
+    let kursiC9= "C09"
+    let kursiC10= "C10"
+    let kursiC11= "C11"
+
+    let kursiD1= "D01"
+    let kursiD2= "D02"
+    let kursiD3= "D03"
+    let kursiD4= "D04"
+    let kursiD5= "D05"
+    let kursiD6= "D06"
+    let kursiD7= "D07"
+    let kursiD8= "D08"
+    let kursiD9= "D09"
+    let kursiD10= "D10"
+    let kursiD11= "D11"
+
+    let kursiE1= "E01"
+    let kursiE2= "E02"
+    let kursiE3= "E03"
+    let kursiE4= "E04"
+    let kursiE5= "E05"
+    let kursiE6= "E06"
+    let kursiE7= "E07"
+    let kursiE8= "E08"
+    let kursiE9= "E09"
+    let kursiE10= "E10"
+    let kursiE11= "E11"
+
+    let kursiF1= "F01"
+    let kursiF2= "F02"
+    let kursiF3= "F03"
+    let kursiF4= "F04"
+    let kursiF5= "F05"
+    let kursiF6= "F06"
+    let kursiF7= "F07"
+    let kursiF8= "F08"
+    let kursiF9= "F09"
+    let kursiF10= "F10"
+    let kursiF11= "F11"
+
     return(
         <div>
             <div>
 
                
                 <Row>
-                <Col sm={2} className={style.kanan}> 
+                {/* <Col sm={2} className={style.kanan}> 
                     <div className={style.garis_verikal1}></div>   
                 </Col>
-                
-                <Col sm={9} className={style.mid}>
+                 */}
+                <Col sm={12} className={style.mid}>
                     
-                    <Row>
-                    
+                    <Row className={style.space}>
                     <Col sm={4} className={style.mid}>
                     <Row>
                         <Col sm={3}></Col>
-                        <Col sm={2}><Check kursi={kursi}/></Col>
-                        {/* <Col sm={2}><Check  kursi={kursi}/></Col>
-                        <Col sm={2}><Check kursi={kursi2}/></Col> */}
+                        <Col sm={2}><Check kursi={kursiA1}/></Col>
+                        <Col sm={2}><Check  kursi={kursiA2}/></Col>
+                        <Col sm={2}><Check kursi={kursiA3}/></Col>
                         <Col sm={3}></Col>
                     </Row>
                     </Col>
 
-                    {/* <Col sm={4} className={style.mid}>
+                     <Col sm={4} className={style.mid}>
                     <Row>
                         <Col sm={1}></Col>
-                        <Col sm={2}><Check kursi={kursi}/></Col>
-                        <Col sm={2}><Check kursi={kursi}/></Col>
-                        <Col sm={2}><Check kursi={kursi}/></Col>
-                        <Col sm={2}><Check kursi={kursi}/></Col>
-                        <Col sm={2}><Check kursi={kursi}/></Col>
+                        <Col sm={2}><Check kursi={kursiA4}/></Col>
+                        <Col sm={2}><Check kursi={kursiA5}/></Col>
+                        <Col sm={2}><Check kursi={kursiA6}/></Col>
+                        <Col sm={2}><Check kursi={kursiA7}/></Col>
+                        <Col sm={2}><Check kursi={kursiA8}/></Col>
                         <Col sm={1}></Col>
                     </Row>
                     </Col>
@@ -47,131 +115,195 @@ export default function Seat(){
                     <Col sm={4} className={style.mid}>
                     <Row>
                         <Col sm={3}></Col>
-                        <Col sm={2}><Check kursi={kursi}/></Col>
-                        <Col sm={2}><Check kursi={kursi}/></Col>
-                        <Col sm={2}><Check kursi={kursi}/></Col>
+                        <Col sm={2}><Check kursi={kursiA9}/></Col>
+                        <Col sm={2}><Check kursi={kursiA10}/></Col>
+                        <Col sm={2}><Check kursi={kursiA11}/></Col>
                         <Col sm={3}></Col>
                     </Row>
-                    </Col> */}
+                    </Col>
+                    </Row>
+                            {/* //SECTION B */}
+                    <Row className={style.space2}>
+                    <Col sm={4} className={style.mid}>
+                    <Row>
+                        <Col sm={3}></Col>
+                        <Col sm={2}><Check kursi={kursiB1}/></Col>
+                        <Col sm={2}><Check  kursi={kursiB2}/></Col>
+                        <Col sm={2}><Check kursi={kursiB3}/></Col>
+                        <Col sm={3}></Col>
+                    </Row>
+                    </Col>
+
+                     <Col sm={4} className={style.mid}>
+                    <Row>
+                        <Col sm={1}></Col>
+                        <Col sm={2}><Check kursi={kursiB4}/></Col>
+                        <Col sm={2}><Check kursi={kursiB5}/></Col>
+                        <Col sm={2}><Check kursi={kursiB6}/></Col>
+                        <Col sm={2}><Check kursi={kursiB7}/></Col>
+                        <Col sm={2}><Check kursi={kursiB8}/></Col>
+                        <Col sm={1}></Col>
+                    </Row>
+                    </Col>
+
+                    <Col sm={4} className={style.mid}>
+                    <Row>
+                        <Col sm={3}></Col>
+                        <Col sm={2}><Check kursi={kursiB9}/></Col>
+                        <Col sm={2}><Check kursi={kursiB10}/></Col>
+                        <Col sm={2}><Check kursi={kursiB11}/></Col>
+                        <Col sm={3}></Col>
+                    </Row>
+                    </Col>
+                    </Row>
+
+                    {/* //SECTION C */}
+                    <Row className={style.space2}>
+                    <Col sm={4} className={style.mid}>
+                    <Row>
+                        <Col sm={3}></Col>
+                        <Col sm={2}><Check kursi={kursiC1}/></Col>
+                        <Col sm={2}><Check  kursi={kursiC2}/></Col>
+                        <Col sm={2}><Check kursi={kursiC3}/></Col>
+                        <Col sm={3}></Col>
+                    </Row>
+                    </Col>
+
+                     <Col sm={4} className={style.mid}>
+                    <Row>
+                        <Col sm={1}></Col>
+                        <Col sm={2}><Check kursi={kursiC4}/></Col>
+                        <Col sm={2}><Check kursi={kursiC5}/></Col>
+                        <Col sm={2}><Check kursi={kursiC6}/></Col>
+                        <Col sm={2}><Check kursi={kursiC7}/></Col>
+                        <Col sm={2}><Check kursi={kursiC8}/></Col>
+                        <Col sm={1}></Col>
+                    </Row>
+                    </Col>
+
+                    <Col sm={4} className={style.mid}>
+                    <Row>
+                        <Col sm={3}></Col>
+                        <Col sm={2}><Check kursi={kursiC9}/></Col>
+                        <Col sm={2}><Check kursi={kursiC10}/></Col>
+                        <Col sm={2}><Check kursi={kursiC11}/></Col>
+                        <Col sm={3}></Col>
+                    </Row>
+                    </Col>
+                    </Row>
+
+                    {/* //SECTION D */}
+                    <Row className={style.space2}>
+                    <Col sm={4} className={style.mid}>
+                    <Row>
+                        <Col sm={3}></Col>
+                        <Col sm={2}><Check kursi={kursiD1}/></Col>
+                        <Col sm={2}><Check  kursi={kursiD2}/></Col>
+                        <Col sm={2}><Check kursi={kursiD3}/></Col>
+                        <Col sm={3}></Col>
+                    </Row>
+                    </Col>
+
+                     <Col sm={4} className={style.mid}>
+                    <Row>
+                        <Col sm={1}></Col>
+                        <Col sm={2}><Check kursi={kursiD4}/></Col>
+                        <Col sm={2}><Check kursi={kursiD5}/></Col>
+                        <Col sm={2}><Check kursi={kursiD6}/></Col>
+                        <Col sm={2}><Check kursi={kursiD7}/></Col>
+                        <Col sm={2}><Check kursi={kursiD8}/></Col>
+                        <Col sm={1}></Col>
+                    </Row>
+                    </Col>
+
+                    <Col sm={4} className={style.mid}>
+                    <Row>
+                        <Col sm={3}></Col>
+                        <Col sm={2}><Check kursi={kursiD9}/></Col>
+                        <Col sm={2}><Check kursi={kursiD10}/></Col>
+                        <Col sm={2}><Check kursi={kursiD11}/></Col>
+                        <Col sm={3}></Col>
+                    </Row>
+                    </Col>
+                    </Row>
+
+                    {/* //SECTION E */}
+                    <Row className={style.space2}>
+                    <Col sm={4} className={style.mid}>
+                    <Row>
+                        <Col sm={3}></Col>
+                        <Col sm={2}><Check kursi={kursiE1}/></Col>
+                        <Col sm={2}><Check  kursi={kursiE2}/></Col>
+                        <Col sm={2}><Check kursi={kursiE3}/></Col>
+                        <Col sm={3}></Col>
+                    </Row>
+                    </Col>
+
+                     <Col sm={4} className={style.mid}>
+                    <Row>
+                        <Col sm={1}></Col>
+                        <Col sm={2}><Check kursi={kursiE4}/></Col>
+                        <Col sm={2}><Check kursi={kursiE5}/></Col>
+                        <Col sm={2}><Check kursi={kursiE6}/></Col>
+                        <Col sm={2}><Check kursi={kursiE7}/></Col>
+                        <Col sm={2}><Check kursi={kursiE8}/></Col>
+                        <Col sm={1}></Col>
+                    </Row>
+                    </Col>
+
+                    <Col sm={4} className={style.mid}>
+                    <Row>
+                        <Col sm={3}></Col>
+                        <Col sm={2}><Check kursi={kursiE9}/></Col>
+                        <Col sm={2}><Check kursi={kursiE10}/></Col>
+                        <Col sm={2}><Check kursi={kursiE11}/></Col>
+                        <Col sm={3}></Col>
+                    </Row>
+                    </Col>
+                    </Row>
+
+                    {/* //SECTION F */}
+                    <Row className={style.space2}>
+                    <Col sm={4} className={style.mid}>
+                    <Row>
+                        <Col sm={3}></Col>
+                        <Col sm={2}><Check kursi={kursiF1}/></Col>
+                        <Col sm={2}><Check  kursi={kursiF2}/></Col>
+                        <Col sm={2}><Check kursi={kursiF3}/></Col>
+                        <Col sm={3}></Col>
+                    </Row>
+                    </Col>
+
+                     <Col sm={4} className={style.mid}>
+                    <Row>
+                        <Col sm={1}></Col>
+                        <Col sm={2}><Check kursi={kursiF4}/></Col>
+                        <Col sm={2}><Check kursi={kursiF5}/></Col>
+                        <Col sm={2}><Check kursi={kursiF6}/></Col>
+                        <Col sm={2}><Check kursi={kursiF7}/></Col>
+                        <Col sm={2}><Check kursi={kursiF8}/></Col>
+                        <Col sm={1}></Col>
+                    </Row>
+                    </Col>
+
+                    <Col sm={4} className={style.mid}>
+                    <Row>
+                        <Col sm={3}></Col>
+                        <Col sm={2}><Check kursi={kursiF9}/></Col>
+                        <Col sm={2}><Check kursi={kursiF10}/></Col>
+                        <Col sm={2}><Check kursi={kursiF11}/></Col>
+                        <Col sm={3}></Col>
+                    </Row>
+                    </Col>
+                    </Row>
                     
-                   
 
-                    {/* <Col sm={4} className={style.mid}>
-                    <Button className={style.undone}>A04</Button>   
-                    <Button className={style.undone}>A05</Button> 
-                    <Button className={style.undone}>A06</Button> 
-                    <Button className={style.undone}>A07</Button> 
-                    <Button className={style.undone}>A08</Button> 
-                    </Col>
-                    <Col sm={4} className={style.mid}>
-                    <Button className={style.undone}>A09</Button> 
-                    <Button className={style.undone}>A010</Button>   
-                    <Button className={style.undone}>A011</Button> 
-                    </Col> */}
-                    </Row>
+                    
 
-                    <Row className={style.space2}>
-                    <Col sm={4} className={style.mid}>
-                    <Button className={style.undone}>B01</Button>   
-                    <Button className={style.undone}>B02</Button> 
-                    <Button className={style.undone}>B03</Button> 
-                    </Col>
-                    <Col sm={4} className={style.mid}>
-                    <Button className={style.undone}>B04</Button>   
-                    <Button className={style.undone}>B05</Button> 
-                    <Button className={style.undone}>B06</Button> 
-                    <Button className={style.undone}>B07</Button> 
-                    <Button className={style.undone}>B08</Button> 
-                    </Col>
-                    <Col sm={4} className={style.mid}>
-                    <Button className={style.undone}>B09</Button> 
-                    <Button className={style.undone}>B010</Button>   
-                    <Button className={style.undone}>B011</Button> 
-                    </Col>
-                    </Row>
-
-                    <Row className={style.space2}>
-                    <Col sm={4} className={style.mid}>
-                    <Button className={style.undone}>C01</Button>   
-                    <Button className={style.undone}>C02</Button> 
-                    <Button className={style.undone}>C03</Button> 
-                    </Col>
-                    <Col sm={4} className={style.mid}>
-                    <Button className={style.undone}>C04</Button>   
-                    <Button className={style.undone}>C05</Button> 
-                    <Button className={style.undone}>C06</Button> 
-                    <Button className={style.undone}>C07</Button> 
-                    <Button className={style.undone}>C08</Button> 
-                    </Col>
-                    <Col sm={4} className={style.mid}>
-                    <Button className={style.undone}>C09</Button> 
-                    <Button className={style.undone}>C010</Button>   
-                    <Button className={style.undone}>C011</Button> 
-                    </Col>
-                </Row>
-
-                <Row className={style.space2}>
-                    <Col sm={4} className={style.mid}>
-                    <Button className={style.undone}>D01</Button>   
-                    <Button className={style.undone}>D02</Button> 
-                    <Button className={style.undone}>D03</Button> 
-                    </Col>
-                    <Col sm={4} className={style.mid}>
-                    <Button className={style.undone}>D04</Button>   
-                    <Button className={style.undone}>D05</Button> 
-                    <Button className={style.undone}>D06</Button> 
-                    <Button className={style.undone}>D07</Button> 
-                    <Button className={style.undone}>D08</Button> 
-                    </Col>
-                    <Col sm={4} className={style.mid}>
-                    <Button className={style.undone}>D09</Button> 
-                    <Button className={style.undone}>D010</Button>   
-                    <Button className={style.undone}>D011</Button> 
-                    </Col>
-                </Row>
-
-                <Row className={style.space2}>
-                    <Col sm={4} className={style.mid}>
-                    <Button className={style.undone}>E01</Button>   
-                    <Button className={style.undone}>E02</Button> 
-                    <Button className={style.undone}>E03</Button> 
-                    </Col>
-                    <Col sm={4} className={style.mid}>
-                    <Button className={style.undone}>E04</Button>   
-                    <Button className={style.undone}>E05</Button> 
-                    <Button className={style.undone}>E06</Button> 
-                    <Button className={style.undone}>E07</Button> 
-                    <Button className={style.undone}>E08</Button> 
-                    </Col>
-                    <Col sm={4} className={style.mid}>
-                    <Button className={style.undone}>E09</Button> 
-                    <Button className={style.undone}>E010</Button>   
-                    <Button className={style.undone}>E011</Button> 
-                    </Col>
-                </Row>
-
-                <Row className={style.space2}>
-                    <Col sm={4} className={style.mid}>
-                    <Button className={style.undone}>F01</Button>   
-                    <Button className={style.undone}>F02</Button> 
-                    <Button className={style.undone}>F03</Button> 
-                    </Col>
-                    <Col sm={4} className={style.mid}>
-                    <Button className={style.undone}>F04</Button>   
-                    <Button className={style.undone}>F05</Button> 
-                    <Button className={style.undone}>F06</Button> 
-                    <Button className={style.undone}>F07</Button> 
-                    <Button className={style.undone}>F08</Button> 
-                    </Col>
-                    <Col sm={4} className={style.mid}>
-                    <Button className={style.undone}>F09</Button> 
-                    <Button className={style.undone}>F010</Button>   
-                    <Button className={style.undone}>F011</Button> 
-                    </Col>
-                </Row>
+                    
                 </Col>
 
-                <Row className={style.space2}>
+                {/* <Row className={style.space2}>
                     <Col sm={1}></Col>
                     <Col sm={11}>
                         <Row>
@@ -227,7 +359,7 @@ export default function Seat(){
                     </Col>
                     </Row>
                     </Col>
-                </Row>
+                </Row> */}
 
                 </Row>
                 

@@ -12,46 +12,9 @@ import Screen from "./pages/Screen/Screen";
 import Desc from "./components/Desc/Desc";
 import DescUpcoming from './components/DescUpcoming/DescUpcoming';
 import DescribeUpcoming from './pages/DescribeUpcoming/DescribeUpcoming';
+import Struck from './pages/Struck/Struck';
+import { LOAD_MOVIE, LOAD_UPCOMING } from './GraphQL/Query/Query';
 
-export const LOAD_MOVIE = gql `
-query Movie {
-    Movie {
-      id
-      Cast
-      Directors
-      Duration
-      Genre
-      Img
-      Producers
-      Production
-      Rate
-      Sinopsis
-      Title
-      Trailer
-      Writer
-    }
-  }
-`
-
-export const LOAD_UPCOMING = gql `
-query Upcoming {
-  Upcoming {
-    id
-    Cast
-    Directors
-    Duration
-    Genre
-    Img
-    Producers
-    Production
-    Rate
-    Sinopsis
-    Title
-    Trailer
-    Writer
-  }
-}
-`
 
 
 
@@ -79,6 +42,7 @@ function App() {
       <Route path="/Description/:id/Detail" element={<Detail data={data} />} />
       {/* <Route path="/Desc/:id" element={<Desc/>} /> */}
       <Route path="/Description/:id/Detail/Screen" element={<Screen/>} />
+      <Route path="/Description/:id/Detail/Struck" element={<Struck/>} />
       <Route path="/Detail" element={<Detail/>} />
       <Route path="/Movie" element={<Home/>} />
       <Route path="/Upcoming" element={<Home/>} />

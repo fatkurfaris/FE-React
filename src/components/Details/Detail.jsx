@@ -1,6 +1,7 @@
-import React from "react";
+import React from "react"
+import { useState } from "react";
 import {Link, useParams} from 'react-router-dom'
-import { Container } from "react-bootstrap";
+import { Container, Modal } from "react-bootstrap";
 import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
 import {Button} from 'react-bootstrap'
@@ -9,27 +10,23 @@ import { FormControl } from 'react-bootstrap';
 import {Image} from 'react-bootstrap'
 import style from './Detail.module.css'
 import Gambar1 from '../../img/movie-theater-g39fcba8ce_1920.jpg'
+import Confirm from "../Confirm/Confirm";
 
 export default function Details({data}){
-    const {id}= useParams();
-    const testing = data.Movie
-    console.log({data});
-    console.log(localStorage.getItem("Seat"));
-    var retrievedObject=localStorage.getItem("Seat")
-    console.log({retrievedObject});
-    return(
-        <div>
-            <div id="result">tesss</div>
-            <div id="result">tesss</div>
-            <div id="result">tesss</div>
-            <div id="result">tesss</div>
-            <div id="result">tesss</div>
-            
-            {localStorage.getItem("Seat")}
-            <div id="Seat"></div>
 
-            {testing.filter(index=>index.id==id).map((index,detail)=>(
+    const {id}= useParams();
+    const testing = data?.Movie
+    // console.log({data});
+    // console.log(localStorage.getItem("Seat"));
+    var retrievedObject=localStorage.getItem("Seat")
+    // console.log({retrievedObject});
+    return(
+        
+        <div>
+            {console.log("ini atas")}
+            {testing?.filter(index=>index.id==id).map((index,detail)=>(
             <div>
+                {/* {console.log(index)} */}
                 <Container className={style.space}>
                     <div>
                           <h3 className={style.text}>{index.Title}</h3>
@@ -44,16 +41,15 @@ export default function Details({data}){
                             </Row>
                             <Row className={style.space4}>
                                 {/* <Col md={4}></Col> */}
-                                <Col  className={style.mid}> 
-                                    <Button className={style.submit}>
-                                        <link rel="stylesheet" href="Description" />
-                                         Payment
-                                    </Button>
+                                <Col  className={style.mid}>
+
+                                <Confirm index={index}/>
+                                
                                 </Col>
                             </Row>
                           </div>
                       </div>
-                    </Col>
+                    </Col>  
                     <Col xs={6} md={6} className={style.space4}>
                     <div>
                         
@@ -63,12 +59,12 @@ export default function Details({data}){
                                 {index.Duration} Minute
                                 </h4>
                                 <h4 className={style.minute}>
-                                Rp.1500000
+                                {index.harga}
                                 </h4>
                                 
                             </Col>
                             <Col sm={6}>  
-                            <h4 className={style.minute}>
+                            <h4 className={style.minute} Minute>
                                 {index.Rate}
                                 </h4> 
                                 <Link to={`/Description/${index.id}/Detail/Screen`}><Button className={style.Seat}>Seat</Button></Link>
@@ -110,12 +106,15 @@ export default function Details({data}){
                                 <Col sm={1}><h5>:</h5></Col>
                                 <Col className={style.kiri}><h5>{index.Sinopsis}</h5></Col>
                             </Row>
+                            <Row>
+                                <Col sm={3} className={style.kiri}> <h5>SEAT</h5></Col>
+                                <Col sm={1}><h5>:</h5></Col>
+                                <Col className={style.kiri}><h5>{localStorage.getItem("Seat")}</h5></Col>
+                            </Row>
                     </div>
                     <Form.Select aria-label="Default select example" className={style.text1}>
                                     <option >Payment Method</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <option value="1">{index.Pay}</option>
                     </Form.Select>
                     </Col>  
                     

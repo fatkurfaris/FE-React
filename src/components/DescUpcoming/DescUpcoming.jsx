@@ -12,7 +12,7 @@ import Gambar1 from '../../img/movie-theater-g39fcba8ce_1920.jpg'
 
 export default function DescUpcoming({upData}){
     const {id}=useParams();
-    const Up = upData.Upcoming
+    const Up = upData?.Upcoming
     // console.log("ini Up");
     // console.log({id});
     
@@ -25,7 +25,7 @@ export default function DescUpcoming({upData}){
         <div>
             {/* {console.log("t", Up.filter(index=>index.id==id))}
             {console.log("testing")} */}
-            {Up.filter(index=>index.id==id).map((index,detail)=>(
+            {Up?.filter(index=>index.id==id).map((index,detail)=>(
             <div>  
                 <div>
                     <Container className={style.space}>
