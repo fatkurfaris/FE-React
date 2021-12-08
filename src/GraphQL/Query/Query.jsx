@@ -80,3 +80,10 @@ mutation DeleteData($id: Int!) {
     id
   }
 }`
+
+export const DATA_EDIT = gql`
+mutation EditData($id: Int!, $Seat: String!) {
+  update_Pemesanan_by_pk(pk_columns: {id: $id}, _set: {Seat: $Seat}) {
+    id
+  }
+}`

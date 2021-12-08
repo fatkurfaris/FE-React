@@ -66,7 +66,7 @@ function Confirm(index){
             <Button variant="primary" onClick={handleShow}>
                                     Payment
                                 </Button>
-                                <div onSubmit={handleSubmit}>
+                                <div >
                                 <Modal show={show} onHide={handleClose}>
                                     <Modal.Header closeButton>
                                         <Modal.Title>Confirm Payment</Modal.Title>
@@ -114,7 +114,7 @@ function Confirm(index){
                                         Close
                                     </Button>
                                     {/* {testing?.filter(index=>index.id==id).map((index,detail)=>( */}
-                                    <Link to={`/Description/:id/Detail/Data`}>
+                                    <Link to={`/Description/${id}/Detail/Data`}>
                                     <Button variant="primary" onClick={handleSubmit}>
                                      Yes
                                     </Button>

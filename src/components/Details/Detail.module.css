@@ -85,6 +85,10 @@
     text-align: left;
 }
 
+.kiri2{
+    margin-left: 10px;
+}
+
 .minute{
     background-color: rgba(15, 58, 121, 1);
     color: white;

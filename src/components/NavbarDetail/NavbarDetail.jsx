@@ -22,6 +22,7 @@ export default function NavbarDetail(){
       <Nav.Link href="/" className={style.text}>Home</Nav.Link>   
       <Nav.Link href="/Login">Login</Nav.Link>
       <Nav.Link href="About">About</Nav.Link>
+     
     </Nav>
   </Navbar.Collapse>
   </Container>

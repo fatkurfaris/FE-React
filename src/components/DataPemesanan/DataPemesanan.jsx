@@ -1,16 +1,17 @@
 import React from "react"
 import { useState } from "react";
 import {Link, useParams} from 'react-router-dom'
-import { DATA_DELETE, DATA_PEMESANAN } from "../../GraphQL/Query/Query";
+import { DATA_DELETE, DATA_EDIT, DATA_PEMESANAN } from "../../GraphQL/Query/Query";
 import Rincian from "../Details/Details";
 import { useMutation, useQuery } from '@apollo/client';
 import Log from "../Login/Login";
 import style from './Data.module.css'
 import { Button, Col, Container, Row } from "react-bootstrap";
+import { getInclusionDirectives } from "@apollo/client/utilities";
 
 
 export default function DataPemesanan(){
-    // const {id}= useParams();
+    const {id}= useParams();
     // const testing = data?.Movie
 
     // const editPengunjung = (editUser) => {
@@ -23,19 +24,28 @@ export default function DataPemesanan(){
     //     }})
     // }
     const [deletedata] = useMutation(DATA_DELETE);
+    const [editdata] = useMutation(DATA_EDIT);
+
     const {data:pemesanan}= useQuery(DATA_PEMESANAN);
     const listData = pemesanan?.Pemesanan;
 
     const hapusdata = (idx) => {
         deletedata({variables: {
-            id: idx
+            id: idx,
+        }})
+    }
+
+    const dataedit = (editUser) => {
+        // console.log(editUser);
+        editdata({variables: {
+            Seat: editUser.Seat,
         }})
     }
     
     var userr=localStorage.getItem("username")
 
     // console.log("ini pertama",{pemesanan});
-    console.log("ini pesanan",listData);
+    // console.log("ini pesanan",listData);
 
     return(
         <>
@@ -72,8 +82,10 @@ export default function DataPemesanan(){
  
 
                             <Col sm={3} className={style.mid}>
-                                <Button className={style.space3}  onClick={hapusdata(index.id)}>edit</Button>
-                                <Button>Delete</Button>
+                                {/* <Button className={style.space3} >edit</Button> */}
+                                <Link to={`/Description/${id}/Detail`}><Button  onClick={()=>hapusdata(index.id)}>Delete </Button></Link>
+                                <Link to={`/Description/${id}/Detail/Data/ScreenEdit`}><Button onClick={()=>dataedit(index.id)}>Edit</Button></Link>
+                                <Link to={`/Description/${id}/Detail`}><Button  >Tambah </Button></Link>
                                 {/* hapusPengunjung={()=> hapusPengunjung(v.id)}
                                 editPengunjung={()=> editPengunjung(v.id)} */}
                             </Col>

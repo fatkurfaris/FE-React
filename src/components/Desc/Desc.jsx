@@ -23,20 +23,21 @@ export default function Desc({data}){
     var pass=localStorage.getItem("Password")
 
     let y;
-    for (let i = 0; i < 2; i++) {
-        if (proses[i].Name==user && proses[i].Password==pass) {
+    // for (let i = 0; i < 2; i++) {
+        if (proses[1].Name==user && proses[1].Password==pass) {
             y= <Link to={`/Description/${id}/Detail`}><Button>Buy Here</Button></Link>
          }else{
             y=<Link to={`/Login`}><Button>Login</Button></Link>
          }
         
-    }
+    // }
     // console.log(user);
     // console.log(proses.id);
     console.log("ini loggg",loggg.Login);
     // console.log("proses",{proses});
     // console.log("proses2",proses.Name);
     console.log("proses3",proses);
+    
 
     return(
         <div>

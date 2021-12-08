@@ -43,8 +43,8 @@ export default function Details({data}){
                             <Row className={style.space4}>
                                 {/* <Col md={4}></Col> */}
                                 <Col  className={style.mid}>
-
-                                <Confirm index={index}/>
+                                <Link to={`/Description/${id}/Detail/Data`}><Button >Lihat Data</Button></Link>
+                                <Confirm className={style.kiri2} index={index}/>
                                 
                                 </Col>
                             </Row>
@@ -72,6 +72,12 @@ export default function Details({data}){
                             {/* <Col sm={3}></Col> */}
                         </Row>
                             <Rincian data={data}/> 
+                            <Row>
+                                <Col sm={3} className={style.kiri}></Col>
+                                <Col sm={1}><h5></h5></Col>
+                                <Col className={style.kiri}></Col>
+                            </Row>
+                            
                             <Row>
                                 <Col sm={3} className={style.kiri}> <h5>SEAT</h5></Col>
                                 <Col sm={1}><h5>:</h5></Col>

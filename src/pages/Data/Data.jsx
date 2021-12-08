@@ -8,7 +8,6 @@ export default function Data({pesanan}){
         <>
         <NavbarDetail/>
         <DataPemesanan pesanan={pesanan}/>
-        <Footer/>
         </>
     )
 }

@@ -1,0 +1,59 @@
+.mid{
+    text-align: center;
+    align-items: center;
+    /* display: flex;
+    flex-direction: row; */
+}
+
+.kanan{
+    align-items: right;
+    text-align: right;
+    padding-top: 100px;
+
+}
+
+.space{
+    padding-top: 100px;
+}
+
+.space2{
+    padding-top: 30px;
+    background-color: ;
+}
+
+.space3{
+    padding-bottom: 60px;
+}
+
+.space4{
+    margin-top: 15px;
+}
+
+.space5{
+    margin-top: 15px;
+    color: white;
+    background-color: red;
+}
+
+.space5:hover{
+    margin-top: 15px;
+    color: white
+}
+
+.done{
+    background-color: red;
+}
+
+.undone{
+    background-color: green;
+}
+.garis_verikal1{
+    
+    border-right: 5px black solid;
+    /* border-bottom: 5px black solid;
+    width: 400px; */
+    height: 400px;
+    width: 0px;
+    margin-left: 210px;
+}
+

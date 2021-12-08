@@ -15,6 +15,7 @@ import DescribeUpcoming from './pages/DescribeUpcoming/DescribeUpcoming';
 import Struck from './pages/Struck/Struck';
 import { LOAD_MOVIE, LOAD_UPCOMING, LOGIN, DATA_PEMESANAN } from './GraphQL/Query/Query';
 import Data from './pages/Data/Data';
+import ScreenEdit from './pages/ScreenEdit/ScreenEdit';
 
 
 
@@ -42,8 +43,11 @@ function App() {
       <Route path="/DescribeUpcoming/:id" element={<DescribeUpcoming upData={upData} />} />
 
       <Route path="/Description/:id" element={<Description data={data} />} />
+      {/* <Route path="//Description/Detail/Data" element={<Data/>}/> */}
+      
       <Route path="/Description/:id/Detail" element={<Detail data={data} />} />
       <Route path="/Description/:id/Detail/Data" element={<Data pesanan={pesanan}/>} />
+      <Route path="/Description/:id/Detail/Data/ScreenEdit" element={<ScreenEdit/>} />
       {/* <Route path="/Desc/:id" element={<Desc/>} /> */}
       <Route path="/Description/:id/Detail/Screen" element={<Screen/>} />
       <Route path="/Description/:id/Detail/Struck" element={<Struck/>} />
