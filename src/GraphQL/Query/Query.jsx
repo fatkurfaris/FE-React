@@ -51,3 +51,12 @@ query Upcoming {
   }
 }
 `
+export const LOGIN = gql `
+query Login {
+  Login {
+    id
+    Name
+    Password
+  }
+}
+`

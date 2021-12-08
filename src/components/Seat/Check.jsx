@@ -34,7 +34,7 @@ export default function Check({kursi}) {
             // Store
             localStorage.setItem("Seat", kursi);
             // Retrieve 
-            
+             
           }
           
       };

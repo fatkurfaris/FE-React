@@ -43,11 +43,14 @@ function Confirm(index){
             Harga:pembayaran.harga,
             Seat:localStorage.getItem("Seat"),
         }
-            insertPemesanan({variables: {
-            Payment: pembayaran.Pay,
-            Title: pembayaran.Title,
-            Seat: localStorage.getItem("Seat"),
-            Harga: pembayaran.Harga,
+            insertPemesanan({
+                variables: {
+                    object:{
+                    Payment: pembayaran.Pay,
+                    Title: pembayaran.Title,
+                    Seat: localStorage.getItem("Seat"),
+                    Harga: pembayaran.Harga,
+                    }
             }})
         console.log(newData);
     }

@@ -81,7 +81,7 @@ export default function Seat(){
         <div>
             <div>
 
-               
+                
                 <Row>
                 {/* <Col sm={2} className={style.kanan}> 
                     <div className={style.garis_verikal1}></div>   

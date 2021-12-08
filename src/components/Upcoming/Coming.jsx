@@ -34,12 +34,13 @@ export default function Coming(){
     const {data:upData}= useQuery(LOAD_UPCOMING);
     const {testing}=useQuery(LOAD_UPCOMING);
 
+    // console.log("iniUpdata",upData);
     // if(error) {
     //     console.log(error)
     //     return null
     //   }
     //   console.log("ini upcoming");
-    //   console.log({upData});
+      console.log({upData});
 
     return (
        
@@ -61,6 +62,7 @@ export default function Coming(){
                                 <Card.Text>
                                 <p className={style.text}>{c.Sinopsis}</p> 
                                 </Card.Text>
+                                
                                 <div> <Link to={`/DescribeUpcoming/${c.id}`}><Button>Click Here</Button></Link> </div>    
                             </Card.Body>
                             </Card>

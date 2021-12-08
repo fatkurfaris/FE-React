@@ -8,13 +8,37 @@ import {Form} from 'react-bootstrap'
 import { FormControl } from 'react-bootstrap';
 import {Image} from 'react-bootstrap'
 import style from './Detail.module.css'
+import { useQuery } from '@apollo/client';
 import Gambar1 from '../../img/movie-theater-g39fcba8ce_1920.jpg'
+import { LOGIN } from '../../GraphQL/Query/Query';
 
 export default function Desc({data}){
     const {id}=useParams();
     const testing = data?.Movie
 
-    console.log({data});
+    const {data:loggg}= useQuery(LOGIN);
+    const proses =loggg.Login
+    // console.log("login",loggg);
+
+    var user=localStorage.getItem("username")
+    var pass=localStorage.getItem("Password")
+
+    let x,y;
+    if (loggg.Name==user) {
+       x=console.log("berhasil");
+    //    y= <Link to={`/Description/${index.id}/Detail`}><Button>Buy Here</Button></Link>
+    }else{
+       x=console.log("gagal");
+       y=<Link to={`/Login`}><Button>Login</Button></Link>
+    }
+
+    console.log(user);
+    console.log(proses.id);
+
+    console.log("ini loggg",loggg.Login);
+    // console.log("proses",{proses});
+    console.log("proses2",loggg.id);
+    console.log("proses3",proses);
 
     return(
         <div>
@@ -33,7 +57,15 @@ export default function Desc({data}){
                                 <Image src={index.Img  } width="70%   "/>
                                 <Row className={style.space4}>
                                     <Col  className={style.kanan}> 
-                                        <Link to={`/Description/${index.id}/Detail`}><Button>Buy Here</Button></Link>
+                                        {/* {loggg.filter(L=>L.Name==user).map((L)=>(
+                                            <Link to={`/Description/${index.id}/Detail`}><Button>Buy Here</Button></Link>
+                                        ))} */}
+                                {y}
+                                        {/* {loggg.Name==user 
+                                            
+                                        } */}
+
+                                        {/* <Link to={`/Description/${index.id}/Detail`}><Button>Buy Here</Button></Link> */}
                                     </Col>
                                     <Col className={style.kiri}>  
                                         <a href={index.Trailer} target="_blank" rel="noopener noreferrer"><Button className={style.text2}>Trailer</Button></a>
