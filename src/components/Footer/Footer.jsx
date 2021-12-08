@@ -11,7 +11,7 @@ import styles from "./Footer.module.css"
 export default function Footer(){
     return(
         <div className={styles.bg}>
-            <Container className={styles.space}>
+            <Container className={styles.space} >
                 <Row>
                     <Col sm={4} className={styles.text1}> <Image src={Gambar1} width="50%"/> </Col>
                     <Col sm={4}></Col>

@@ -8,21 +8,15 @@ import Log from "../Login/Login";
 import style from './Data.module.css'
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { getInclusionDirectives } from "@apollo/client/utilities";
+import EditSeat from "./EditSeat";
 
 
 export default function DataPemesanan(){
     const {id}= useParams();
-    // const testing = data?.Movie
+    const [state, setState] = useState({
+        editing: true,
+      });
 
-    // const editPengunjung = (editUser) => {
-    //     // console.log(editUser);
-    //     updatePassenger({variables: {
-    //         Nama: editUser.nama,
-    //         Umur: editUser.umur,
-    //         JenisKelamin: editUser.jenisKelamin,
-    //         id: id_P
-    //     }})
-    // }
     const [deletedata] = useMutation(DATA_DELETE);
     const [editdata] = useMutation(DATA_EDIT);
 
@@ -37,15 +31,31 @@ export default function DataPemesanan(){
 
     const dataedit = (editUser) => {
         // console.log(editUser);
+        var kursii=localStorage.getItem("Seat")
         editdata({variables: {
-            Seat: editUser.Seat,
+            Seat: kursii,
         }})
+
     }
     
     var userr=localStorage.getItem("username")
 
     // console.log("ini pertama",{pemesanan});
     // console.log("ini pesanan",listData);
+    let viewMode = {};
+    let editMode = {};
+
+    const handleBukaInput = () => {
+        setState({
+          ...state,
+          editing: false,
+        });
+      };
+    if (state.editing) {
+        viewMode.display = "none";
+      } else {
+        editMode.display = "none";
+      }
 
     return(
         <>
@@ -79,12 +89,17 @@ export default function DataPemesanan(){
                             <Col sm={3} className={style.mid}>
                                 <h5>{index.Seat}</h5>
                             </Col>
- 
 
                             <Col sm={3} className={style.mid}>
                                 {/* <Button className={style.space3} >edit</Button> */}
                                 <Link to={`/Description/${id}/Detail`}><Button  onClick={()=>hapusdata(index.id)}>Delete </Button></Link>
-                                <Link to={`/Description/${id}/Detail/Data/ScreenEdit`}><Button onClick={()=>dataedit(index.id)}>Edit</Button></Link>
+                                
+                                {/* <Link to={`/Description/${id}/Detail`}>
+                                    <Button onClick={()=>dataedit(index.id)}>Edit</Button>
+                                    
+                                </Link> */}
+                                <Button onClick={handleBukaInput} style={editMode}>Edit</Button>
+                                
                                 <Link to={`/Description/${id}/Detail`}><Button  >Tambah </Button></Link>
                                 {/* hapusPengunjung={()=> hapusPengunjung(v.id)}
                                 editPengunjung={()=> editPengunjung(v.id)} */}
@@ -92,8 +107,13 @@ export default function DataPemesanan(){
                         </Row>
                 </div>
             </div>
-
+            
          ))}
+        {listData?.filter(index=>index.Pemesan==userr).map((index)=>( 
+         <div style={viewMode}>
+            <EditSeat dataedit={()=>dataedit(index.id)}/>
+        </div>
+        ))}
          </Container>
          </div>  
         </>

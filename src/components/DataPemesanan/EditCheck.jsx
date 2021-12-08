@@ -38,6 +38,27 @@ export default function EditCheck({kursi}) {
           }
           
       };
+
+    //   const handleSubmit = () =>{
+    //     const newData = {
+    //         Payment: pembayaran.Pay,
+    //         Title :pembayaran.Title,
+    //         Harga:pembayaran.harga,
+    //         Seat:localStorage.getItem("Seat"),
+    //         Pemesan:localStorage.getItem("username"),
+    //     }
+    //         insertPemesanan({
+    //             variables: {
+    //                 object:{
+    //                 Payment: pembayaran.Pay,
+    //                 Title: pembayaran.Title,
+    //                 Seat: localStorage.getItem("Seat"),
+    //                 Harga: pembayaran.harga,
+    //                 Pemesan:localStorage.getItem("username"),
+    //                 }
+    //         }})
+    //     console.log(newData);
+    // }
     return (
         
       <div ref={ref}>

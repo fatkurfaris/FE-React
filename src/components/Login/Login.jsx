@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container,  Row , Form, Button} from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 import style from './Login.module.css'
 import { useState } from "react";
 
@@ -10,8 +11,8 @@ export default function Log(){
       })
 
     const handleSubmit =() => {
-        // let name = name;
-        // let password = password;
+        // let name = name; //fikry =>username login
+        // let password = password; //fikryfikry =>password login
         const newData = {
             nama: state.nama,
             umur: state.password
@@ -60,7 +61,7 @@ export default function Log(){
                         <Form.Control type="password" placeholder="Password" name="password" value={state.password}  onChange={onChange} />
                      </Col>
                     </Form.Group>
-                    <Button variant="light" onClick={handleSubmit}>Submit</Button>
+                    <Link to={`/`}><Button variant="light" onClick={handleSubmit}>Submit</Button></Link>
                 </Form>
             </Col>
             <Col sm={3}></Col>
