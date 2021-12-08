@@ -62,7 +62,7 @@ query Login {
 }
 `
 
-export const PEMESANAN = gql `
+export const DATA_PEMESANAN = gql `
 query Pemesanan {
   Pemesanan {
     id
@@ -71,5 +71,12 @@ query Pemesanan {
     Harga
     Payment
     Seat
+  }
+}`
+
+export const DATA_DELETE =gql`
+mutation DeleteData($id: Int!) {
+  delete_Pemesanan_by_pk(id: $id) {
+    id
   }
 }`

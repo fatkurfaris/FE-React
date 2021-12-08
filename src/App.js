@@ -13,7 +13,7 @@ import Desc from "./components/Desc/Desc";
 import DescUpcoming from './components/DescUpcoming/DescUpcoming';
 import DescribeUpcoming from './pages/DescribeUpcoming/DescribeUpcoming';
 import Struck from './pages/Struck/Struck';
-import { LOAD_MOVIE, LOAD_UPCOMING, LOGIN, PEMESANAN } from './GraphQL/Query/Query';
+import { LOAD_MOVIE, LOAD_UPCOMING, LOGIN, DATA_PEMESANAN } from './GraphQL/Query/Query';
 import Data from './pages/Data/Data';
 
 
@@ -24,7 +24,7 @@ function App() {
   const {data:upData} = useQuery(LOAD_UPCOMING)
   const {data:loggg} = useQuery(LOGIN)
   const {data} = useQuery(LOAD_MOVIE)
-  const {data:pesanan} = useQuery(PEMESANAN)
+  const {data:pesanan} = useQuery(DATA_PEMESANAN)
 
   // console.log("testApp");
   // console.log(upData);

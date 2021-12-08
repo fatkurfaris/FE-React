@@ -17,7 +17,7 @@ export default function Desc({data}){
     const {id}=useParams();
     const testing = data?.Movie
     const {data:loggg}= useQuery(LOGIN);
-    const proses =loggg.Login
+    const proses =loggg?.Login
     // console.log("login",loggg);
     var user=localStorage.getItem("username")
     var pass=localStorage.getItem("Password")
