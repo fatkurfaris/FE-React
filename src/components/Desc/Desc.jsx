@@ -11,33 +11,31 @@ import style from './Detail.module.css'
 import { useQuery } from '@apollo/client';
 import Gambar1 from '../../img/movie-theater-g39fcba8ce_1920.jpg'
 import { LOGIN } from '../../GraphQL/Query/Query';
+import Rincian from '../Details/Details';
 
 export default function Desc({data}){
     const {id}=useParams();
     const testing = data?.Movie
-
     const {data:loggg}= useQuery(LOGIN);
     const proses =loggg.Login
     // console.log("login",loggg);
-
     var user=localStorage.getItem("username")
     var pass=localStorage.getItem("Password")
 
-    let x,y;
-    if (loggg.Name==user) {
-       x=console.log("berhasil");
-    //    y= <Link to={`/Description/${index.id}/Detail`}><Button>Buy Here</Button></Link>
-    }else{
-       x=console.log("gagal");
-       y=<Link to={`/Login`}><Button>Login</Button></Link>
+    let y;
+    for (let i = 0; i < 2; i++) {
+        if (proses[i].Name==user && proses[i].Password==pass) {
+            y= <Link to={`/Description/${id}/Detail`}><Button>Buy Here</Button></Link>
+         }else{
+            y=<Link to={`/Login`}><Button>Login</Button></Link>
+         }
+        
     }
-
-    console.log(user);
-    console.log(proses.id);
-
+    // console.log(user);
+    // console.log(proses.id);
     console.log("ini loggg",loggg.Login);
     // console.log("proses",{proses});
-    console.log("proses2",loggg.id);
+    // console.log("proses2",proses.Name);
     console.log("proses3",proses);
 
     return(
@@ -57,15 +55,7 @@ export default function Desc({data}){
                                 <Image src={index.Img  } width="70%   "/>
                                 <Row className={style.space4}>
                                     <Col  className={style.kanan}> 
-                                        {/* {loggg.filter(L=>L.Name==user).map((L)=>(
-                                            <Link to={`/Description/${index.id}/Detail`}><Button>Buy Here</Button></Link>
-                                        ))} */}
                                 {y}
-                                        {/* {loggg.Name==user 
-                                            
-                                        } */}
-
-                                        {/* <Link to={`/Description/${index.id}/Detail`}><Button>Buy Here</Button></Link> */}
                                     </Col>
                                     <Col className={style.kiri}>  
                                         <a href={index.Trailer} target="_blank" rel="noopener noreferrer"><Button className={style.text2}>Trailer</Button></a>
@@ -88,41 +78,7 @@ export default function Desc({data}){
                             <h4 className={style.space3}>
                                 {index.Title}
                             </h4>
-                            <Row>
-                                <Col sm={3} className={style.kiri}> <h5>Genre</h5></Col>
-                                <Col sm={1}><h5>:</h5></Col>
-                                <Col className={style.kiri}><h5>{index.Genre}</h5></Col>
-                            </Row>
-                            <Row>
-                                <Col sm={3} className={style.kiri}> <h5>Producer</h5></Col>
-                                <Col sm={1}><h5>:</h5></Col>
-                                <Col className={style.kiri}><h5>{index.Producers}</h5></Col>
-                            </Row>
-                            <Row>
-                                <Col sm={3} className={style.kiri}> <h5>Director</h5></Col>
-                                <Col sm={1}><h5>:</h5></Col>
-                                <Col className={style.kiri}><h5>{index.Directors}</h5></Col>
-                            </Row>
-                            <Row>
-                                <Col sm={3} className={style.kiri}> <h5>Writer</h5></Col>
-                                <Col sm={1}><h5>:</h5></Col>
-                                <Col className={style.kiri}><h5>{index.Writer}</h5></Col>
-                            </Row>
-                            <Row>
-                                <Col sm={3} className={style.kiri}> <h5>Production</h5></Col>
-                                <Col sm={1}><h5>:</h5></Col>
-                                <Col className={style.kiri}><h5>{index.Production}</h5></Col>
-                            </Row>
-                            <Row>
-                                <Col sm={3} className={style.kiri}> <h5>Castn</h5></Col>
-                                <Col sm={1}><h5>:</h5></Col>
-                                <Col className={style.kiri}><h5>{index.Cast}</h5></Col>
-                            </Row>
-                            <Row>
-                                <Col sm={3} className={style.kiri}> <h5>Sinopsis</h5></Col>
-                                <Col sm={1}><h5>:</h5></Col>
-                                <Col className={style.kiri}><h5>{index.Sinopsis}</h5></Col>
-                            </Row>
+                            <Rincian data={data}/> 
                         </div>
                         </Col> 
                     </Row>

@@ -13,7 +13,8 @@ import Desc from "./components/Desc/Desc";
 import DescUpcoming from './components/DescUpcoming/DescUpcoming';
 import DescribeUpcoming from './pages/DescribeUpcoming/DescribeUpcoming';
 import Struck from './pages/Struck/Struck';
-import { LOAD_MOVIE, LOAD_UPCOMING, LOGIN } from './GraphQL/Query/Query';
+import { LOAD_MOVIE, LOAD_UPCOMING, LOGIN, PEMESANAN } from './GraphQL/Query/Query';
+import Data from './pages/Data/Data';
 
 
 
@@ -23,6 +24,7 @@ function App() {
   const {data:upData} = useQuery(LOAD_UPCOMING)
   const {data:loggg} = useQuery(LOGIN)
   const {data} = useQuery(LOAD_MOVIE)
+  const {data:pesanan} = useQuery(PEMESANAN)
 
   // console.log("testApp");
   // console.log(upData);
@@ -41,6 +43,7 @@ function App() {
 
       <Route path="/Description/:id" element={<Description data={data} />} />
       <Route path="/Description/:id/Detail" element={<Detail data={data} />} />
+      <Route path="/Description/:id/Detail/Data" element={<Data pesanan={pesanan}/>} />
       {/* <Route path="/Desc/:id" element={<Desc/>} /> */}
       <Route path="/Description/:id/Detail/Screen" element={<Screen/>} />
       <Route path="/Description/:id/Detail/Struck" element={<Struck/>} />

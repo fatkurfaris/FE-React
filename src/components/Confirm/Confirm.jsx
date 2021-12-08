@@ -3,12 +3,14 @@ import {Button, Col, Row, Modal} from 'react-bootstrap'
 import { useState} from "react";
 import { useMutation } from '@apollo/client';
 import { Insert_Data, LOAD_MOVIE } from "../../GraphQL/Query/Query";
-import {Link, useParams} from 'react-router-dom'
+import {Link, useParams, useSearchParams} from 'react-router-dom'
 import style from './Confirm.module.css'
 
 
 
 function Confirm(index){
+    const {id}= useParams();
+    // const testing = data?.Movie
     const [insertPemesanan] = useMutation(Insert_Data);
     // const [state, setState] = useState();
     const [show, setShow] = useState(false);
@@ -20,6 +22,7 @@ function Confirm(index){
         Title: "",
         Seat: "",
         Harga:"",
+        Pemesan:"",
       })
 
     
@@ -42,6 +45,7 @@ function Confirm(index){
             Title :pembayaran.Title,
             Harga:pembayaran.harga,
             Seat:localStorage.getItem("Seat"),
+            Pemesan:localStorage.getItem("username"),
         }
             insertPemesanan({
                 variables: {
@@ -49,7 +53,8 @@ function Confirm(index){
                     Payment: pembayaran.Pay,
                     Title: pembayaran.Title,
                     Seat: localStorage.getItem("Seat"),
-                    Harga: pembayaran.Harga,
+                    Harga: pembayaran.harga,
+                    Pemesan:localStorage.getItem("username"),
                     }
             }})
         console.log(newData);
@@ -69,6 +74,11 @@ function Confirm(index){
                                     <Modal.Body>
                                         <Row>
                                             <h5>
+                                            <Row>
+                                                <Col sm={2}>Pemesan</Col>
+                                                <Col className={style.Tmid} sm={1}>:</Col>
+                                                <Col sm={9}>{localStorage.getItem("username")}</Col>
+                                            </Row>
                                             <Row>
                                                 <Col sm={2}>Title</Col>
                                                 <Col className={style.Tmid} sm={1}>:</Col>
@@ -103,11 +113,13 @@ function Confirm(index){
                                     <Button variant="secondary" onClick={handleClose}>
                                         Close
                                     </Button>
-                                    <Link to={`/`}>
+                                    {/* {testing?.filter(index=>index.id==id).map((index,detail)=>( */}
+                                    <Link to={`/Description/:id/Detail/Data`}>
                                     <Button variant="primary" onClick={handleSubmit}>
                                      Yes
                                     </Button>
                                     </Link>
+                                     {/* ))} */}
                                     </Modal.Footer>
                                 </Modal>
                                 </div>

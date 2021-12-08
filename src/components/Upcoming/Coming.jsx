@@ -40,7 +40,7 @@ export default function Coming(){
     //     return null
     //   }
     //   console.log("ini upcoming");
-      console.log({upData});
+    //   console.log({upData});
 
     return (
        

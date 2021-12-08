@@ -7,6 +7,7 @@ mutation MyMutation($object: Pemesanan_insert_input!) {
       Title
       Seat
       Harga
+      Pemesan
     }
   }`
 
@@ -60,3 +61,15 @@ query Login {
   }
 }
 `
+
+export const PEMESANAN = gql `
+query Pemesanan {
+  Pemesanan {
+    id
+    Pemesan
+    Title
+    Harga
+    Payment
+    Seat
+  }
+}`
